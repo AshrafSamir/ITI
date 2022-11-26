@@ -1,0 +1,197 @@
+
+<html lang="en">
+<head>
+   <meta name="description" content="Day2 CST" />
+   <meta name="keywords" content="CST, Html, CSS, Style, Structural HTml" />
+   <meta name="author" content="Mobile, UI" />
+   <!-- <meta http-equiv="refresh" content="3; url=http://www.google.com" /> -->
+    <title>Day2</title>
+    <!--Internal Style-->
+    <!-- <style>
+        /*Simple Selecctor*/
+        h1{
+            color: red;
+        }
+
+        /*Group Selector*/
+        h1,p,div{
+            color: red;
+            background-color: aqua;
+            width: 50%;
+            text-align: center;
+            margin: 10px auto;
+        }
+
+        /*ID Selector*/
+        #myh{
+            color: aqua;
+            background-color: blue;
+        }
+        /*class Selector*/
+        .myh2{
+            color: bisque;
+            background-color: blueviolet;
+        }
+
+        b{
+            color: blue;
+        }
+
+        b{
+            color: bisque;
+        }
+
+        /*Priorities
+            1-Important
+            2-Inline Style
+            3-ID
+            4-Class
+        */
+    </style> -->
+    <!--External Style-->
+    <!--Mime Type-->
+    <link href="../CSS/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <!-- <h1>Hii</h1>
+    <p>Welcome Back</p>
+    <div>
+        <a href="http://www.google.com">Google</a>
+    </div>
+
+    <h3 id="myh">Hello !!</h3> -->
+    <!-- <h4 id="myh">Hello !!</h4> -->
+    <!-- <h5 class="myh2">!! Hello !!</h5>
+
+    <h4 id="myh" class="myh2">Hii EveryOne</h4> -->
+    <!--Inline Style-->
+    <!-- <b style="color: yellow;" id="myh">Text Bold</b> -->
+<!-- 
+    <p>Hello EveryOne</p>
+    <div>
+        <p>Hello EveryOne</p>
+        <h1>Hii</h1>
+        <p>Welcome</p>
+        <span>
+            <p>Welcome Again</p>
+        </span>
+    </div>
+
+
+    <h1>Heading 1</h1>
+    <p>Welcome After Heading1</p>
+    <h3>hii</h3>
+    <span>
+        <p>!! Welcome After Heading1</p>
+    </span>
+
+    <input type="text" placeholder="Name" />
+    <input type="number" placeholder="Age" />
+
+    <a href="http://www.google.com">Google</a> -->
+
+    <iframe src="https://iti.gov.eg/iti/home" width="200px">
+        This Browser Not Support IFrame [Plz Update Ur Browser]
+    </iframe>
+
+    <a href="https://iti.gov.eg/iti/home" target="pp">Click Me</a>
+    <iframe width="200px" src="" name="pp">
+        This Browser Not Support IFrame [Plz Update Ur Browser]
+    </iframe>
+    <table cellSpacing="10" cellPadding="10" border="1px" bordercolor="red">
+        <caption>Demo Table</caption>
+        <thead>
+            <tr>
+                <th colspan="2">Cell A</th>
+                <th colspan="2">Cell B</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>Cell 1.1</td>
+                <td>Cell 1.2</td>
+                <td>Cell 1.3</td>
+                <td>Cell 1.4</td>
+            </tr>
+            <tr>
+            <td>Cell 2.1</td>
+            <td>Cell 2.2</td>
+            <td rowspan="3">Cell 2.3</td>
+            <td>Cell 2.4</td>
+        </tr>
+        <tr>
+            <td>Cell 3.1</td>
+            <td>Cell 3.2</td>
+            <!-- <td>Cell 3.3</td> -->
+            <td>Cell 3.4</td>
+        </tr>
+        <tr>
+            <td>Cell 4.1</td>
+            <td>Cell 4.2</td>
+            <!-- <td>Cell 4.3</td> -->
+            <td>Cell 4.4</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <form action="./profile.html">
+        <fieldset>
+            <legend>Form Demo</legend>
+            <div>
+                <label for="name">Name: </label>
+                <input id="name" value="Ahmed" name="name" required type="text"/>
+            </div>
+            <div>
+                <label for="age">Age: </label>
+                <input id="age" value="22" name="age" required type="number"/>
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input id="email" value="ahmed@gmail.com" name="email" required type="email"/>
+
+                <!-- <input type="color" />
+                <input type="date" /> -->
+            </div>
+
+            <div>
+                <input id="sports" name="chBox" value="sports" type="checkbox" />
+                <label for="sports">Sports</label>
+                <br/>
+                <input id="read" name="chBox" value="reading" type="checkbox" />
+                <label for="read">Reading</label>
+                <br/>
+                <input id="swi" name="chBox" value="swim" type="checkbox" />
+                <label for="swi">Swimming</label>
+            </div>
+
+            <div>
+                <input id="m" name="gender" value="male" type="radio" />
+                <label for="m">Male</label>
+                <br/>
+                <input id="f" name="gender" value="female" type="radio" />
+                <label for="f">Female</label>
+            </div>
+
+            <input type="submit" value="Submit"/>
+            <input type="reset" value="Reset"/>
+
+            <!--Query String [ ?name=val&prop=val&prop=val ]-->
+            <select >
+                <optgroup label="Africa" disabled>
+                    <option>Egypt</option>
+                    <option>Sudan</option>
+                </optgroup>
+                <optgroup label="Europe">
+                    <option>Barca</option>
+                    <option>Madrid</option>
+                </optgroup>
+            </select>
+
+        </fieldset>
+    </form>
+
+
+</body>
+</html>

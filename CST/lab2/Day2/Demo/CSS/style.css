@@ -1,0 +1,63 @@
+/* #myh{
+    background-color: red; */
+/* } */
+/* Simple - ID - Class - Group */
+/*Child Selector*/
+
+/* p{
+
+} */
+
+/*Direct Child Selector*/
+/* div>p{
+    color: red;
+} */
+/* 
+div>span>p{
+
+} */
+
+/*General Child Selector*/
+/* div p{
+    color: blue;   
+} */
+
+/*Sipling Selector*/
+/*Direct Sipling Selector*/
+/* h1+p{
+    color: brown;
+} */
+
+/*General Sipling Selector*/
+/* h1~p{
+    color: brown;
+}
+
+input[type="text"]{
+    border: 1px solid red;
+} */
+
+/* a[href="http://www.google.com"]{
+    color: red;
+} */
+
+/* a[href^="http:"]{
+    color: red;
+} */
+
+/* a[href$=".com"]{
+    color: red;
+} */
+
+/* a[href*="google"]{
+    color: red;
+}
+
+p{
+    font-size: 5pt;
+} */
+
+/*Universal Selector*/
+/* *{
+    font-size: 25pt !important;
+} */

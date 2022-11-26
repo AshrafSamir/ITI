@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Application</title>
+    <link rel="stylesheet" type="text/css" href="../css/application.css">
+</head>
+
+<body>
+    <form action="form2.html">
+        <table class="table_style">
+            <tr>
+                <td><label for="fn">First Name:</label></td>
+                <td><input id="fn" name="first" type="text" /></td>
+            </tr>
+            <tr>
+                <td><label for="ln">Last Name:</label></td>
+                <td><input id="ln" name="last" type="text" /></td>
+            </tr>
+            <tr>
+                <td><label for="password">password:</label></td>
+                <td><input id="password" name="password" type="password" /></td>
+            </tr>
+            <tr>
+                <td rowspan="2"><label>Gender</label></td>
+                <td>
+                    <input id="male" name="gender" value="male" type="radio" />
+                    <label for="male">Male</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="female" name="gender" value="female" type="radio" />
+                    <label for="female">female</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Birthday:</label>
+                    <select>
+                        <option value="" selected>[Select your month]</option>
+                        <option>
+                            May
+                        </option>
+                        <option>
+                            October
+                        </option>
+                    </select>
+                </td>
+                <td class="test">
+                    <input class="day" type="number" placeholder="dd" />
+                    <input class="year" type="number" placeholder="yy" />
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center; padding: 10px;" colspan="2">
+                    <label><b><u>Interests</u></b></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="sp" type="checkbox" name="Sports" value="Sports" />
+                    <label for="sp">Sports</label>
+                </td>
+                <td>
+                    <input id="mu" type="checkbox" name="Music" value="Music" />
+                    <label for="mu">Music</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="bo" type="checkbox" name="books" value="books" />
+                    <label for="bo">books</label>
+                </td>
+                <td>
+                    <input id="cs" type="checkbox" name="Computer" value="Computer stuff" />
+                    <label for="cs">Computer stuff</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="fa" type="checkbox" name="Fashion" value="Fashion" />
+                    <label for="fa">Fashion</label>
+                </td>
+                <td>
+                    <input id="mo" type="checkbox" name="Movies" value="Movies" />
+                    <label for="mo">Movies</label>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center; padding: 10px;" colspan="2">
+                    <input type="submit">
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+</body>
+
+</html>

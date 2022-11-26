@@ -1,0 +1,39 @@
+*{
+    background-color: pink;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+table{
+    border: 15px #f19fae outset;
+}
+
+input{
+    background-color: white;
+    border: none;
+}
+select{
+    background-color: white;
+}
+.year{
+    width: 3rem;
+}
+.day{
+    width: 2rem;
+}
+tr, td {
+    border: inset #f19fae 2px;
+  }
+
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+  }

@@ -1,0 +1,13 @@
+body{
+    background-color: pink;
+}
+
+.headers{
+    text-align: center;
+}
+
+#next{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

@@ -1,0 +1,16 @@
+*{
+    background-color: pink;
+}
+
+form{
+    width: 30%;
+    margin: 30px auto;
+
+}
+input{
+    background-color: white;
+    border: none;
+}
+select{
+    background-color: white;
+}

@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1667823147 source:d:\iti\oop\lab5\task1\main.cpp
+	<iostream>
+	"graphics.h"
+
+1667821763 d:\iti\oop\lab5\task1\graphics.h
+	<iostream>
+	<math.h>
+	<windows.h>
+	<Windows.h>
+

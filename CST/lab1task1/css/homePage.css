@@ -1,0 +1,18 @@
+body{
+    background-color: pink;
+    text-align: center;  
+}
+p{
+    color:red;
+}
+.welcome{
+    position: absolute;
+    right:0px;
+}
+img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}

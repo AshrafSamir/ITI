@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      style="
+        border: 3px solid red;
+        width: 300px;
+        height: 400px;
+        position: relative;
+      "
+    >
+      <img
+        src="icon1.gif"
+        alt="image"
+        id="img1"
+        style="position: absolute; left: 0; top: 170px"
+      />
+      <img
+        src="icon2.gif"
+        alt="image"
+        id="img2"
+        style="position: absolute; right: 0; top: 170px"
+      />
+      <img
+        src="TOP.JPG"
+        alt="image"
+        id="img3"
+        style="position: absolute; top: 370px; left: 120px"
+      />
+    </div>
+    <button id="btn1" onclick="toggle()">Go</button>
+    <button id="btn2" onclick="reset()">Reset</button>
+    <br />
+    <br />
+    <p id="p1" style="color: blue"></p>
+    <p id="p2" style="color: blue"></p>
+    <script src="script.js"></script>
+  </body>
+</html>
