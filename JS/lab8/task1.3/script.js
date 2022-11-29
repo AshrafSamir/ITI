@@ -19,7 +19,7 @@ function handleClick() {
     win.document.body.appendChild(textEl);
 
     console.log(win.document);
-  }, 1000);
+  }, 200);
 }
 
 function handleClose() {
