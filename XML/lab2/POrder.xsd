@@ -1,0 +1,64 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="purchaseOrder" type="purchaseOrderInfo" ></xs:element>
+	
+	<xs:complexType name="purchaseOrderInfo">
+		<xs:sequence>
+			<xs:element name="shipTo" type="shipInfo"></xs:element>
+			<xs:element name="billTo" type="billInfo"></xs:element>
+			<xs:element name="items" type="itemsInfo"></xs:element>
+			<xs:element name="ship_date" type="ship_date_info"></xs:element>
+			<xs:element name="ship_method" type="ship_method_info"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="orderDate" type="xs:string"></xs:attribute>
+	</xs:complexType>
+	
+	<xs:complexType name="shipInfo">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string"></xs:element>
+			<xs:element name="street" type="xs:string"></xs:element>
+			<xs:element name="city" type="xs:string"></xs:element>
+			<xs:element name="state" type="xs:string"></xs:element>
+			<xs:element name="zip" type="xs:string"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="country" type="xs:string"></xs:attribute>
+	</xs:complexType>
+	
+	<xs:complexType name="billInfo">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string"></xs:element>
+			<xs:element name="street" type="xs:string"></xs:element>
+			<xs:element name="city" type="xs:string"></xs:element>
+			<xs:element name="state" type="xs:string"></xs:element>
+			<xs:element name="zip" type="xs:string"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="country" type="xs:string"></xs:attribute>
+	</xs:complexType>
+	
+	<xs:complexType name="itemsInfo">
+		<xs:sequence>
+			<xs:element name="item" type="itemInfo" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="itemInfo">
+		<xs:sequence>
+			<xs:element name="productName" type="xs:string"></xs:element>
+			<xs:element name="quantity" type="xs:integer"></xs:element>
+			<xs:element name="USPrice" type="xs:decimal"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="partNum" type="xs:string"></xs:attribute>
+	</xs:complexType>
+	
+	<xs:simpleType name="ship_date_info">
+		<xs:restriction base="xs:string">
+			<xs:length value="10"/>
+			<xs:pattern value="\d{2}-\d{2}-\d{4}"/>
+		</xs:restriction>
+	</xs:simpleType>	
+	
+	<xs:complexType name="ship_method_info">
+		<xs:attribute name="type" type="xs:string"></xs:attribute>
+	</xs:complexType>
+
+
+</xs:schema>

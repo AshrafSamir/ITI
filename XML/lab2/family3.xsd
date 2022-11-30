@@ -1,0 +1,68 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="family" type="familyInfo" ></xs:element>
+	
+	<xs:complexType name="familyInfo">
+		<xs:sequence>
+			<xs:element name="grandfather" type="grandfatherInfo"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="grandfatherInfo" mixed="true">
+		<xs:sequence>
+			<xs:element name="father" type="fatherInfo" ></xs:element>
+			<xs:element name="uncle" type="xs:string" maxOccurs="unbounded"></xs:element>
+			<xs:element name="aunt" type="auntInfo"  ></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+
+	
+	<xs:complexType name="fatherInfo" >
+		<xs:sequence>
+			<xs:element name="mother" type="motherInfo" ></xs:element>
+			<xs:element name="daughter" type="daughterInfo" maxOccurs="unbounded"></xs:element>
+			<xs:element name="son" type="sonInfo"  ></xs:element>	
+		</xs:sequence>
+		<xs:attribute name="job" type="xs:string"/>
+		<xs:attribute name="name" type="xs:string"/>
+	</xs:complexType>
+	
+	<xs:complexType name="motherInfo">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+
+	
+	<xs:complexType name="daughterInfo" mixed="true">
+
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" minOccurs="0"></xs:element>
+			<xs:element name="child" type="xs:string" minOccurs="0"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="age" type="xs:string"/>
+		<xs:attribute name="job" type="xs:string"/>
+		
+	
+	</xs:complexType>
+	
+	<xs:complexType name="sonInfo">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="age" type="xs:integer"/>
+				<xs:attribute name="sport" type="xs:string"/>
+			</xs:extension>				
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="auntInfo">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="sons" type="xs:integer"/>
+			</xs:extension>				
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	
+</xs:schema>
