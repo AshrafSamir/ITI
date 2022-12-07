@@ -180,6 +180,59 @@ class LinkedList
             }
         }
 
+        bool removeLastNode()
+        {
+            if(counter == 1)
+            {   counter--;
+                head = tail = NULL;
+                counter = 0;
+
+                return 1;
+            }
+            else if(counter == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                counter--;
+                Node<T> *temp = tail;
+                tail = tail->Prev;
+                tail->Next = NULL;
+                delete temp;
+
+
+                return 1;
+            }
+
+        }
+
+        bool removeFirstNode()
+        {
+            if(counter == 1)
+            {
+                counter--;
+                head = tail = NULL;
+                counter = 0;
+
+                return 1;
+            }
+            else if(counter == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                counter--;
+                Node<T> *temp = head;
+                head = head->Next;
+                head->Prev = NULL;
+                delete temp;
+
+                return 1;
+            }
+
+        }
     protected:
 
     private:

@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1670348270 source:d:\iti\ds\day1\lab1\main.cpp
+	<iostream>
+	"LinkedList.h"
+
+1670399068 d:\iti\ds\day1\lab1\include\linkedlist.h
+	<iostream>
+	"Node.h"
+
+1670339773 d:\iti\ds\day1\lab1\include\node.h
+
+1670431278 source:d:\iti\ds\day2\lab1day2\main.cpp
+	<iostream>
+	"LinkedList.h"
+	"Stack.h"
+	"Queue.h"
+	"CircularQueue.h"
+
+1670424572 d:\iti\ds\day2\lab1day2\include\linkedlist.h
+	<iostream>
+	"Node.h"
+
+1670339773 d:\iti\ds\day2\lab1day2\include\node.h
+
+1670423832 d:\iti\ds\day2\lab1day2\include\stack.h
+	<iostream>
+	"LinkedList.h"
+
+1670424818 d:\iti\ds\day2\lab1day2\include\queue.h
+	<iostream>
+	"LinkedList.h"
+
+1670432212 d:\iti\ds\day2\lab1day2\include\circularqueue.h
+	<iostream>
+
