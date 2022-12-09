@@ -81,3 +81,27 @@
 1670481585 d:\ashraf\iti\ds\day3\lab1day3\include\circularqueue.h
 	<iostream>
 
+1670529689 source:d:\iti\ds\day3\lab1day3\main.cpp
+	<iostream>
+	"LinkedList.h"
+	"Stack.h"
+	"Queue.h"
+	"CircularQueue.h"
+
+1670529689 d:\iti\ds\day3\lab1day3\include\linkedlist.h
+	<iostream>
+	"Node.h"
+
+1670529689 d:\iti\ds\day3\lab1day3\include\node.h
+
+1670529689 d:\iti\ds\day3\lab1day3\include\stack.h
+	<iostream>
+	"LinkedList.h"
+
+1670529689 d:\iti\ds\day3\lab1day3\include\queue.h
+	<iostream>
+	"LinkedList.h"
+
+1670529689 d:\iti\ds\day3\lab1day3\include\circularqueue.h
+	<iostream>
+

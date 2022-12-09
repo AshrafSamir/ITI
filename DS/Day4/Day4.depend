@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1670591870 source:d:\work\instructor\ds\intake 43\mobile-smart\day4\main.cpp
+	<iostream>
+	"Tree.h"
+
+1670591987 d:\work\instructor\ds\intake 43\mobile-smart\day4\include\tree.h
+	<iostream>
+	"Node.h"
+
+1670589389 d:\work\instructor\ds\intake 43\mobile-smart\day4\include\node.h
+
+1670595568 source:d:\iti\ds\day4\main.cpp
+	<iostream>
+	"Tree.h"
+
+1670596731 d:\iti\ds\day4\include\tree.h
+	<iostream>
+	"Node.h"
+
+1670589389 d:\iti\ds\day4\include\node.h
+

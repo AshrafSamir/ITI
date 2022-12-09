@@ -7,14 +7,14 @@ class Node
     public:
 
         T Data;
-        Node *Prev, *Next;
-
+        Node<T> *Left, *Right;
 
         Node(T data)
         {
-            Data= data;
-            Prev = Next = NULL;
+            Data = data;
+            Left = Right = NULL;
         }
+
 
     protected:
 
