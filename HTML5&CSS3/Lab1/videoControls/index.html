@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <section>
+      <video id="myVideo" poster="image/frozen.jpg" width="320" height="240">
+        <source src="video/frozen.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div>
+        <input
+          id="timeSlider"
+          type="range"
+          min="0"
+          value="0"
+          onchange="changeCurrentTimeValue()"
+        />
+        <p>0:00/0:00</p>
+      </div>
+      <input type="button" value="play" onclick="play()" />
+      <input type="button" value="stop" onclick="stop()" />
+
+      <input type="button" value="<<" onclick="start()" />
+      <input type="button" value="<" onclick="backwordFiveSec()" />
+      <input type="button" value=">" onclick="forwordFiveSec()" />
+      <input type="button" value=">>" onclick="end()" />
+      <input
+        type="range"
+        min="0"
+        max="1"
+        step="0.1"
+        value="0.5"
+        id="volumeRange"
+        onchange="volumeRange(this.value)"
+      />
+      <input type="button" value="mute" onclick="mute()" />
+      <div>
+        <label>Speed</label>
+        <input
+          type="range"
+          min="0.5"
+          max="2"
+          step="0.1"
+          value="1"
+          id="speedRange"
+          onchange="speedRange(this.value)"
+        />
+      </div>
+    </section>
+  </body>
+</html>

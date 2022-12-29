@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="image-zoom-plugin-1.0.2/css/image-zoom.css" />
+    <script src="libs/jquery-3.6.2.js"></script>
+    <script src="libs/jquery-ui.js"></script>
+    <script src="image-zoom-plugin-1.0.2/js/image-zoom.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <img
+      id="imageZoomExtra"
+      src="https://picsum.photos/1440/1080"
+      alt="A image to apply the ImageZoom plugin"
+    />
+    <script>
+      $(document).ready(function () {
+        $("#imageZoomExtra").imageZoom({ zoom: 200 });
+      });
+    </script>
+  </body>
+</html>
