@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Untitled Document</title>
+    <!--<link href="MathPoly.css" rel="stylesheet" type="text/css">
+    <script src="MathPoly.js"></script>
+    -->
+    <script src="conditionizr-4.4.0/conditionizr-4.4.0/dist/conditionizr.js"></script>
+    <script src="conditionizr-4.4.0/conditionizr-4.4.0/detects/chrome.js"></script>
+    <script src="conditionizr-4.4.0/conditionizr-4.4.0/detects/firefox.js"></script>
+    <script>
+        conditionizr.config({
+            assets: "/Assets/",
+            tests: {
+                "chrome": ["style"],
+                "firefox": ["style"],
+
+            }
+        })
+        conditionizr.add("nojq", function() {
+            return !window.jQuery
+        });
+        conditionizr.on("nojq", function() {
+            console.log("jQuery is not supported yet");
+        })
+
+
+        conditionizr.polyfill("jQuery.js", ["nojq"]);
+        conditionizr.polyfill("WS_poly.js", ["chrome"]);
+        conditionizr.load("MathPoly.js", ["chrome"])
+        conditionizr.load("MathPoly.css", ["chrome"])
+    </script>
+</head>
+
+<body>
+    <h1>Conditionizer Script Loader</h1>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <mi>z</mi>
+        <mo>=</mo>
+        <msqrt>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>y</mi>
+        </msqrt>
+    </math>
+    <svg xmlns="http://www.w3.org/2000/svg" >
+        <rect x="10" y="10" width="150" height="150" fill="red" id=""></rect>
+        <rect x="10" y="10" width="150" height="150" fill="red" id=""></rect>
+    </svg>
+    <canvas></canvas>
+
+</body></html>

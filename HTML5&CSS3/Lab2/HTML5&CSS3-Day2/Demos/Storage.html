@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Untitled Document</title>
+    <script></script>
+</head>
+
+<body>
+  <meter min="" max="" value="">hghjkl</meter>
+   <mytag attr="">dfhgjkl</mytag>
+   <mark>dfghj</mark>
+   <newtag>dhgjk</newtag>
+    <input type="text" id="txt1">
+    <button id="btn1">save</button>
+    <script>
+        if(!myAPImodel){
+            myAPImodel={
+                display:function(){
+                    
+                }
+            }
+            
+        }
+        //implementation for required API--->Polyfill
+        if(!navigator.geolocation){
+            navigator.geolocation={
+                getCurrentPosition:function(cb,fb,optObj){
+                    
+                }
+            }
+        }
+            
+        //native
+        myAPImodel.display();
+        
+        document.querySelector("#btn1").onclick = function() {
+
+            var val = document.getElementById("txt1").value;
+            localStorage.setItem("userName", val);
+            localStorage.setItem("userID", "123-SD");
+            localStorage.setItem("userAge", 15);
+            sessionStorage.setItem("count", 10);
+
+
+
+
+        }
+    </script>
+
+</body></html>

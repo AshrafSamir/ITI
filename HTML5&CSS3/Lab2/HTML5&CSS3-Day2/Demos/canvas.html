@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Untitled Document</title>
+    <style>
+        canvas {
+            border: red dotted 5px;
+        }
+        #d1{
+            border: blue solid 5px;
+            width:150px;
+            height:150px;
+            border-radius: 79px;
+        }
+    </style>
+
+</head>
+
+<body>
+   <div id="d1"></div>
+    <canvas id="canv1" width="450" height="350"></canvas>
+    <script>
+        var canvas = document.getElementById("canv1");
+        var ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(10, 10);
+        ctx.lineTo(100, 100);
+        ctx.lineTo(200, 100);
+        //ctx.strokeStyle="blue";
+        ctx.lineWidth = 10;
+        ctx.lineJoin = "round";
+        //ctx.lineCap = "round";
+        
+        //ctx.closePath();
+        ctx.stroke();
+        ctx.fillStyle="red";
+        ctx.fill();
+        
+        ctx.beginPath();
+        ctx.arc(150, 150, 100, 0, Math.PI, false)
+        ctx.closePath();
+
+        ctx.fillStyle = "yellow"
+        ctx.fill(); //
+        ctx.stroke(); //
+        
+        ctx.font="36pt Georgia";
+        ctx.lineWidth=2
+        ctx.fillText("Canvas",100,100);
+        ctx.strokeText("Canvas",100,100);
+        
+        ctx.clearRect(0,0,canvas.width,canvas.height)
+        //ctx.fillStyle = "white"
+        //ctx.fill()
+        
+        //ctx.fillRect(10,10,100,150)
+        //ctx.strokeRect(10,10,100,150);
+        
+        ctx.roundRect(10,10,100,100,[5,10,20,25])
+        ctx.stroke();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body></html>

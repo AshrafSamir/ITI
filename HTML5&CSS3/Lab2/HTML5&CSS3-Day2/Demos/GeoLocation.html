@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Untitled Document</title>
+
+</head>
+
+<body>
+    <script>
+        navigator.geolocation.getCurrentPosition(function(pos){
+            console.log(pos.coords.longitude);
+            console.log(pos.coords.latitude);
+            console.log(pos.coords);
+            location.replace("http://maps.google.com/maps?q=" + pos.coords.latitude + ",+" + pos.coords.longitude);
+        },function(err){
+            console.log(err.code);
+            console.log(err.message);
+        },{timeout:0});
+
+    </script>
+
+</body>
+
+</html>
