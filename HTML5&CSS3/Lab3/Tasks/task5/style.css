@@ -1,0 +1,12 @@
+input:valid+p
+{
+  display: none;
+}
+input:invalid
+{
+  border-color: red;
+}
+input
+{
+  display: block;
+}

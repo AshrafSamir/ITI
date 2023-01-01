@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+@keyframes hov {
+  from {
+    background-color: rgb(222, 222, 241);
+    border: 1px solid rgb(160, 160, 247);
+  }
+  to {
+    background-color: rgb(247, 202, 202);
+    border: 1px solid rgb(255, 160, 160);
+    box-shadow: 2px 2px 5px rgb(160, 160, 247), -2px -2px 5px rgb(160, 160, 247);
+  }
+}
+button {
+  width: 500px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: rgb(222, 222, 241);
+  border: 1px solid rgb(160, 160, 247);
+}
+button:hover {
+  animation-name: hov;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}

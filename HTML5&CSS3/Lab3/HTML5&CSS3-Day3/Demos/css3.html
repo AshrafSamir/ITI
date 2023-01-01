@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Untitled Document</title>
+
+    <style>
+        @font-face {
+            font-family: "myfont";
+            src: url("fonts/WOFF/3Dumb-webfont.woff") format("woff");
+        }
+
+        input:invalid+span {
+            color: red;
+            display: inline;
+        }
+
+        input:valid+span {
+            display: none;
+        }
+
+        /*
+        h1::after {
+            content: "\00ab";
+        }
+*/
+        ul li:nth-child(2n) {
+            color: red;
+        }
+
+        #h1id {
+            /*0,1,0,0*/
+            color: red;
+            text-align: center;
+        }
+
+        h1 {
+            /*0,0,0,1*/
+            color: green !important;
+            text-decoration: underline;
+
+            font-family: "myfont";
+            letter-spacing: 5px;
+            font-size: 36pt;
+        }
+
+        img:active {
+            transform: rotate(2turn) scale(2, 2);
+
+
+        }
+
+        img {
+            transition: all 2s;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul>
+        <li>item#1</li>
+        <li>item#1</li>
+        <li>item#1</li>
+        <li>item#1</li>
+        <li>item#1</li>
+        <li>item#1</li>
+        <li>item#1</li>
+        <li>item#1</li>
+    </ul>
+    <h1 id="h1id">heading</h1>
+    <img src="images/newProp.jpg" width="150" height="150">
+    <br>
+    <form>
+        <input type="text" required pattern="[a-z]{5,}">
+        <span>enter required data..... less 5 char</span>
+
+    </form>
+</body></html>
