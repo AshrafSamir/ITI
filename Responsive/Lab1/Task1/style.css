@@ -1,12 +1,18 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 #nav {
   background-color: #777272;
   color: #ffffff;
   display: flex;
-  gap: 10%;
+  gap: 10px;
   justify-content: center;
 }
 #content {
   display: flex;
+  gap: 10px;
 }
 #footer {
   display: flex;
@@ -32,5 +38,7 @@
   }
   #nav {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
