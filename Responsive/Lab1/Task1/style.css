@@ -1,0 +1,36 @@
+#nav {
+  background-color: #777272;
+  color: #ffffff;
+  display: flex;
+  gap: 10%;
+  justify-content: center;
+}
+#content {
+  display: flex;
+}
+#footer {
+  display: flex;
+  border: 1px solid black;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 100%;
+}
+
+#f11 {
+  text-align: center;
+}
+#f12 {
+  background-color: #777272;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  #content {
+    flex-direction: column;
+  }
+  #nav {
+    flex-direction: column;
+  }
+}

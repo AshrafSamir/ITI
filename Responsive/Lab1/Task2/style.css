@@ -1,0 +1,12 @@
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#child {
+  border: 1px solid red;
+  width: 100px;
+  height: 100px;
+}
