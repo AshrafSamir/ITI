@@ -1,0 +1,172 @@
+/* comment will appear in  css */
+/*! comment will appear in  css and min.css */
+.parent {
+  background-color: blue;
+}
+.parent .child {
+  background-color: green;
+}
+.parent .child .subchild {
+  background-color: yellow;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.container-fluid {
+  width: 100%;
+  margin: 0px;
+}
+.container-fluid:hover {
+  background-color: orange;
+}
+
+.font-elem1 {
+  font-size: 30px;
+}
+
+.font-elem2 {
+  font-size: 50px;
+}
+
+.font-elem3 {
+  font-size: 100px;
+}
+
+.elem {
+  background-color: blue;
+  color: red;
+}
+
+.box, .extend-elem {
+  width: 100px;
+  height: 100px;
+  color: red;
+}
+
+.extend-elem {
+  width: 50px;
+  background-color: yellow;
+}
+
+.plac-elem {
+  font-size: 50px;
+  color: green;
+}
+
+.for-elem-1 {
+  font-size: 10px;
+}
+
+.for-elem-2 {
+  font-size: 20px;
+}
+
+.for-elem-3 {
+  font-size: 30px;
+}
+
+.for-elem-4 {
+  font-size: 40px;
+}
+
+.for-elem-5 {
+  font-size: 50px;
+}
+
+.for-elem-6 {
+  font-size: 60px;
+}
+
+.for-elem-7 {
+  font-size: 70px;
+}
+
+.for-elem-8 {
+  font-size: 80px;
+}
+
+.for-elem-9 {
+  font-size: 90px;
+}
+
+.for-elem-1 {
+  font-size: 10px;
+}
+
+.for-elem-2 {
+  font-size: 20px;
+}
+
+.for-elem-3 {
+  font-size: 30px;
+}
+
+.for-elem-4 {
+  font-size: 40px;
+}
+
+.for-elem-5 {
+  font-size: 50px;
+}
+
+.for-elem-6 {
+  font-size: 60px;
+}
+
+.for-elem-7 {
+  font-size: 70px;
+}
+
+.for-elem-8 {
+  font-size: 80px;
+}
+
+.for-elem-9 {
+  font-size: 90px;
+}
+
+.for-elem-10 {
+  font-size: 100px;
+}
+
+.while-elem-1 {
+  font-size: 10px;
+}
+
+.while-elem-2 {
+  font-size: 20px;
+}
+
+.while-elem-3 {
+  font-size: 30px;
+}
+
+.while-elem-4 {
+  font-size: 40px;
+}
+
+.while-elem-5 {
+  font-size: 50px;
+}
+
+.while-elem-6 {
+  font-size: 60px;
+}
+
+.while-elem-7 {
+  font-size: 70px;
+}
+
+.while-elem-8 {
+  font-size: 80px;
+}
+
+.while-elem-9 {
+  font-size: 90px;
+}
+
+.while-elem-10 {
+  font-size: 100px;
+}/*# sourceMappingURL=styles.css.map */

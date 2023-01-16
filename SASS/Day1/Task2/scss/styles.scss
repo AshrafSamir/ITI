@@ -1,0 +1,83 @@
+* {
+  margin: 2% 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$white-color: rgb(255, 255, 255);
+$primer-color: rgb(31, 25, 25);
+$secondry-color: rgba(66, 64, 64, 0.596);
+$third-color: rgb(233, 130, 45);
+$input-background-color: rgba(75, 70, 70, 0.068);
+
+.parent {
+  margin: auto;
+  background-color: $white-color;
+  padding: 2%;
+  border-radius: 10px;
+  width: 70%;
+  box-shadow: 0px 10px 28px $primer-color;
+}
+.parent_header--style {
+  background-color: $primer-color;
+  color: $white-color;
+  padding: 2%;
+  text-align: center;
+  font-size: 2rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px $secondry-color;
+}
+
+.input_container--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+input {
+  padding: 1%;
+  border: 0px solid $secondry-color;
+  background-color: $input-background-color;
+  border-radius: 5px;
+  margin: 1%;
+  width: 95%;
+  height: 2rem;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0px 0px 5px $secondry-color;
+}
+
+@mixin gridcreator($numofcols: 12, $screenname: "", $brekpoint: 0px) {
+  @if ($screenname == "") {
+    @media all and (min-width: $brekpoint) {
+      @for $i from 1 through $numofcols {
+        .col-#{$i} {
+          width: 100/ ($numofcols/$i) * 1%;
+        }
+      }
+    }
+  } @else {
+    @media all and (min-width: $brekpoint) {
+      @for $i from 1 through $numofcols {
+        .col-#{$screenname}-#{$i} {
+          width: 100/ ($numofcols / $i) * 1%;
+        }
+      }
+    }
+  }
+}
+
+@include gridcreator(12, "", 0px);
+@include gridcreator(12, "sm", 576px);
+@include gridcreator(12, "md", 768px);
+@include gridcreator(12, "lg", 992px);
+@include gridcreator(12, "xl", 1200px);
+@include gridcreator(12, "xxl", 1600px);
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

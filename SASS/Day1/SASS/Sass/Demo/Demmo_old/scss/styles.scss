@@ -1,0 +1,112 @@
+//& sass --> "syntactically awesome stylesheet" 
+//& "identation"
+// body
+//    background-color:red;
+//& scss " superset casacading stylesheet"
+// body{
+//     background-color:red;
+// }
+//& 28 nov, 2006 --> hampton catlin 
+//&  comments 
+// comment won't appear in css
+
+/* comment will appear in  css */
+
+
+/*! comment will appear in  css and min.css */
+
+//& nesting ==> don't go more than 4 levels
+@import "./colors";
+.parent {
+    background-color: blue;
+    .child {
+        background-color: green;
+        .subchild {
+            background-color: yellow;
+        }
+    }
+}
+
+//& sass ambersand 
+.container {
+    width: 80%;
+    margin: 0 auto;
+    &-fluid {
+        width: 100%;
+        margin: 0px;
+        &:hover {
+            background-color: orange;
+        }
+    }
+}
+
+//& variables 
+$font:30px; //^ global scope
+.font-elem1 {
+    font-size: $font;
+}
+
+.font-elem2 {
+    $font: 50px; //^ local scope 
+    font-size: $font;
+}
+
+$font:100px; //^ override 
+.font-elem3 {
+    font-size: $font;
+}
+
+.elem {
+    background-color: $primary;
+    color: $secondary;
+}
+
+//& Directives --> At-rule  @ 
+//* @extend 
+.box {
+    width: 100px;
+    height: 100px;
+    color: red;
+}
+
+.extend-elem {
+    width: 50px;
+    @extend .box;
+    background-color: yellow;
+}
+
+//* placeholder --> template 
+%placeholder {
+    font-size: 50px;
+    color: green;
+}
+
+.plac-elem {
+    @extend %placeholder;
+}
+
+//^ interpolation -->#{$varname}
+//& loops
+//? @for
+//to < 
+@for $i from 1 to 10 {
+    .for-elem-#{$i} {
+        font-size: $i *10px;
+    }
+}
+
+// through <=
+@for $i from 1 through 10 {
+    .for-elem-#{$i} {
+        font-size: $i *10px;
+    }
+}
+
+//? @while
+$i:1;
+@while $i <=10 {
+    .while-elem-#{$i} {
+        font-size: $i * 10px;
+    }
+    $i:$i+1;
+}

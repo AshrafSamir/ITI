@@ -1,0 +1,34 @@
+$primary-color: rgb(247, 0, 0);
+$secondary-color: rgb(202, 199, 22);
+
+$fonts-size: 14px, 16px, 18px;
+
+.main {
+  &-title {
+    color: $primary-color;
+  }
+  &-subtitle {
+    color: $secondary-color;
+  }
+  &-btn {
+    color: $primary-color;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+@each $size in $fonts-size {
+  .font-#{$size} {
+    font-size: $size;
+  }
+}
+
+.finish-btn {
+  @media all and (min-width: 0px) {
+    width: 100%;
+  }
+  @media all and (min-width: 768px) {
+    width: 50%;
+  }
+}

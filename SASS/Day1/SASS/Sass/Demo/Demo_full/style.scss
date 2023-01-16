@@ -1,0 +1,228 @@
+//& sass --> "syntactically awesome stylesheet" 
+//& "identation"
+// body
+//    background-color:red;
+//& scss " superset casacading stylesheet"
+// body{
+//     background-color:red;
+// }
+//& 28 nov, 2006 --> hampton catlin 
+//&  comments 
+// comment won't appear in css
+
+/* comment will appear in  css */
+
+
+/*! comment will appear in  css and min.css */
+
+//& nesting ==> don't go more than 4 levels
+@import "./colors";
+.parent {
+    background-color: blue;
+    .child {
+        background-color: green;
+        .subchild {
+            background-color: yellow;
+        }
+    }
+}
+
+//& sass ambersand 
+.container {
+    width: 80%;
+    margin: 0 auto;
+    &-fluid {
+        width: 100%;
+        margin: 0px;
+        &:hover {
+            background-color: orange;
+        }
+    }
+}
+
+//& variables 
+$font:30px; //^ global scope
+.font-elem1 {
+    font-size: $font;
+}
+
+.font-elem2 {
+    $font: 50px; //^ local scope 
+    font-size: $font;
+}
+
+$font:100px; //^ override 
+.font-elem3 {
+    font-size: $font;
+}
+
+.elem {
+    background-color: $primary;
+    color: $secondary;
+}
+
+//& Directives --> At-rule  @ 
+//* @extend 
+.box {
+    width: 100px;
+    height: 100px;
+    color: red;
+}
+
+.extend-elem {
+    width: 50px;
+    @extend .box;
+    background-color: yellow;
+}
+
+//* placeholder --> template 
+%placeholder {
+    font-size: 50px;
+    color: green;
+}
+
+.plac-elem {
+    @extend %placeholder;
+}
+
+//^ interpolation -->#{$varname}
+//& loops
+//? @for
+//to < 
+@for $i from 1 to 10 {
+    .for-elem-#{$i} {
+        font-size: $i *10px;
+    }
+}
+
+// through <=
+@for $i from 1 through 10 {
+    .for-elem-#{$i} {
+        font-size: $i *10px;
+    }
+}
+
+//? @while
+$i:1;
+@while $i <=10 {
+    .while-elem-#{$i} {
+        font-size: $i * 10px;
+    }
+    $i:$i+3;
+}
+
+//? @each
+$colors:red,
+blue,
+green,
+yellow,
+black;
+@each $color in $colors {
+    .each-elem-#{$color} {
+        background-color: $color;
+    }
+}
+
+//? mapping with each
+$websites:("facebook":blue, "youtube":red, "github":black);
+@each $web,
+$value in $websites {
+    .#{$web}-website {
+        background-color: $value;
+        font-size: 30px;
+    }
+}
+
+@media (max-width:500px) {
+    body {
+        background-color: #fff;
+    }
+}
+
+body {
+    @media(max-width: 500px) {
+        background-color: red;
+    }
+}
+
+@function half($size) {
+    @return $size/2;
+}
+
+$sizee:100px;
+.rect {
+    width: $sizee;
+    height: half($sizee);
+}
+
+@mixin block {
+    font-size: 20px;
+    width: 300px;
+    background: #000;
+}
+
+.elem {
+    @include block();
+    font-size: 200px;
+    height: 200px;
+}
+
+@mixin square($font:20px, $bg:red, $size:100px) {
+    width: $size;
+    height: $size;
+    font-size: $font;
+    background-color: $bg;
+}
+
+.elem {
+    @include square(50px, orange)
+}
+
+//? @if,@else
+@mixin theme($is-dark:false) {
+    @if $is-dark {
+        background-color: #000;
+    }
+    @else {
+        background-color: white;
+    }
+}
+
+.them-elem {
+    @include theme(false)
+}
+
+//? BEM "Block element Modifier"
+.grid__col--red {}
+
+@mixin gridcreator($numofcols:12,$screenname:'',$brekpoint:0px){
+    @if($screenname == ""){
+        @media all and (min-width:$brekpoint){
+            @for $i from 1 through $numofcols{
+                .col-#{$i}{
+                    width: 100/($numofcols/$i) *1%;
+                }
+            }
+        }
+    } @else{
+        @media all and (min-width:$brekpoint){
+            @for $i from 1 through $numofcols {
+                .col-#{$screenname}-#{$i}{
+                    width: 100/($numofcols / $i) *1%;
+                }
+            }
+        }
+    }
+}
+
+@include gridcreator(12, "",0px );
+@include gridcreator(12, "sm",576px );
+@include gridcreator(12, "md",768px );
+@include gridcreator(12, "lg",992px );
+@include gridcreator(12, "xl",1200px );
+@include gridcreator(12, "xxl",1600px );
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,451 @@
+/* comment will appear in  css */
+/*! comment will appear in  css and min.css */
+.parent {
+  background-color: blue;
+}
+.parent .child {
+  background-color: green;
+}
+.parent .child .subchild {
+  background-color: yellow;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.container-fluid {
+  width: 100%;
+  margin: 0px;
+}
+.container-fluid:hover {
+  background-color: orange;
+}
+
+.font-elem1 {
+  font-size: 30px;
+}
+
+.font-elem2 {
+  font-size: 50px;
+}
+
+.font-elem3 {
+  font-size: 100px;
+}
+
+.elem {
+  background-color: blue;
+  color: red;
+}
+
+.box, .extend-elem {
+  width: 100px;
+  height: 100px;
+  color: red;
+}
+
+.extend-elem {
+  width: 50px;
+  background-color: yellow;
+}
+
+.plac-elem {
+  font-size: 50px;
+  color: green;
+}
+
+.for-elem-1 {
+  font-size: 10px;
+}
+
+.for-elem-2 {
+  font-size: 20px;
+}
+
+.for-elem-3 {
+  font-size: 30px;
+}
+
+.for-elem-4 {
+  font-size: 40px;
+}
+
+.for-elem-5 {
+  font-size: 50px;
+}
+
+.for-elem-6 {
+  font-size: 60px;
+}
+
+.for-elem-7 {
+  font-size: 70px;
+}
+
+.for-elem-8 {
+  font-size: 80px;
+}
+
+.for-elem-9 {
+  font-size: 90px;
+}
+
+.for-elem-1 {
+  font-size: 10px;
+}
+
+.for-elem-2 {
+  font-size: 20px;
+}
+
+.for-elem-3 {
+  font-size: 30px;
+}
+
+.for-elem-4 {
+  font-size: 40px;
+}
+
+.for-elem-5 {
+  font-size: 50px;
+}
+
+.for-elem-6 {
+  font-size: 60px;
+}
+
+.for-elem-7 {
+  font-size: 70px;
+}
+
+.for-elem-8 {
+  font-size: 80px;
+}
+
+.for-elem-9 {
+  font-size: 90px;
+}
+
+.for-elem-10 {
+  font-size: 100px;
+}
+
+.while-elem-1 {
+  font-size: 10px;
+}
+
+.while-elem-4 {
+  font-size: 40px;
+}
+
+.while-elem-7 {
+  font-size: 70px;
+}
+
+.while-elem-10 {
+  font-size: 100px;
+}
+
+.each-elem-red {
+  background-color: red;
+}
+
+.each-elem-blue {
+  background-color: blue;
+}
+
+.each-elem-green {
+  background-color: green;
+}
+
+.each-elem-yellow {
+  background-color: yellow;
+}
+
+.each-elem-black {
+  background-color: black;
+}
+
+.facebook-website {
+  background-color: blue;
+  font-size: 30px;
+}
+
+.youtube-website {
+  background-color: red;
+  font-size: 30px;
+}
+
+.github-website {
+  background-color: black;
+  font-size: 30px;
+}
+
+@media (max-width: 500px) {
+  body {
+    background-color: #fff;
+  }
+}
+@media (max-width: 500px) {
+  body {
+    background-color: red;
+  }
+}
+
+.rect {
+  width: 100px;
+  height: 50px;
+}
+
+.elem {
+  font-size: 20px;
+  width: 300px;
+  background: #000;
+  font-size: 200px;
+  height: 200px;
+}
+
+.elem {
+  width: 100px;
+  height: 100px;
+  font-size: 50px;
+  background-color: orange;
+}
+
+.them-elem {
+  background-color: white;
+}
+
+@media all and (min-width: 0px) {
+  .col-1 {
+    width: 8.3333333333%;
+  }
+  .col-2 {
+    width: 16.6666666667%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.3333333333%;
+  }
+  .col-5 {
+    width: 41.6666666667%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.3333333333%;
+  }
+  .col-8 {
+    width: 66.6666666667%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.3333333333%;
+  }
+  .col-11 {
+    width: 91.6666666667%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}
+@media all and (min-width: 576px) {
+  .col-sm-1 {
+    width: 8.3333333333%;
+  }
+  .col-sm-2 {
+    width: 16.6666666667%;
+  }
+  .col-sm-3 {
+    width: 25%;
+  }
+  .col-sm-4 {
+    width: 33.3333333333%;
+  }
+  .col-sm-5 {
+    width: 41.6666666667%;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+  .col-sm-7 {
+    width: 58.3333333333%;
+  }
+  .col-sm-8 {
+    width: 66.6666666667%;
+  }
+  .col-sm-9 {
+    width: 75%;
+  }
+  .col-sm-10 {
+    width: 83.3333333333%;
+  }
+  .col-sm-11 {
+    width: 91.6666666667%;
+  }
+  .col-sm-12 {
+    width: 100%;
+  }
+}
+@media all and (min-width: 768px) {
+  .col-md-1 {
+    width: 8.3333333333%;
+  }
+  .col-md-2 {
+    width: 16.6666666667%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.3333333333%;
+  }
+  .col-md-5 {
+    width: 41.6666666667%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-7 {
+    width: 58.3333333333%;
+  }
+  .col-md-8 {
+    width: 66.6666666667%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
+  .col-md-10 {
+    width: 83.3333333333%;
+  }
+  .col-md-11 {
+    width: 91.6666666667%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+}
+@media all and (min-width: 992px) {
+  .col-lg-1 {
+    width: 8.3333333333%;
+  }
+  .col-lg-2 {
+    width: 16.6666666667%;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+  .col-lg-4 {
+    width: 33.3333333333%;
+  }
+  .col-lg-5 {
+    width: 41.6666666667%;
+  }
+  .col-lg-6 {
+    width: 50%;
+  }
+  .col-lg-7 {
+    width: 58.3333333333%;
+  }
+  .col-lg-8 {
+    width: 66.6666666667%;
+  }
+  .col-lg-9 {
+    width: 75%;
+  }
+  .col-lg-10 {
+    width: 83.3333333333%;
+  }
+  .col-lg-11 {
+    width: 91.6666666667%;
+  }
+  .col-lg-12 {
+    width: 100%;
+  }
+}
+@media all and (min-width: 1200px) {
+  .col-xl-1 {
+    width: 8.3333333333%;
+  }
+  .col-xl-2 {
+    width: 16.6666666667%;
+  }
+  .col-xl-3 {
+    width: 25%;
+  }
+  .col-xl-4 {
+    width: 33.3333333333%;
+  }
+  .col-xl-5 {
+    width: 41.6666666667%;
+  }
+  .col-xl-6 {
+    width: 50%;
+  }
+  .col-xl-7 {
+    width: 58.3333333333%;
+  }
+  .col-xl-8 {
+    width: 66.6666666667%;
+  }
+  .col-xl-9 {
+    width: 75%;
+  }
+  .col-xl-10 {
+    width: 83.3333333333%;
+  }
+  .col-xl-11 {
+    width: 91.6666666667%;
+  }
+  .col-xl-12 {
+    width: 100%;
+  }
+}
+@media all and (min-width: 1600px) {
+  .col-xxl-1 {
+    width: 8.3333333333%;
+  }
+  .col-xxl-2 {
+    width: 16.6666666667%;
+  }
+  .col-xxl-3 {
+    width: 25%;
+  }
+  .col-xxl-4 {
+    width: 33.3333333333%;
+  }
+  .col-xxl-5 {
+    width: 41.6666666667%;
+  }
+  .col-xxl-6 {
+    width: 50%;
+  }
+  .col-xxl-7 {
+    width: 58.3333333333%;
+  }
+  .col-xxl-8 {
+    width: 66.6666666667%;
+  }
+  .col-xxl-9 {
+    width: 75%;
+  }
+  .col-xxl-10 {
+    width: 83.3333333333%;
+  }
+  .col-xxl-11 {
+    width: 91.6666666667%;
+  }
+  .col-xxl-12 {
+    width: 100%;
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=style.css.map */
