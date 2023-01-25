@@ -3,6 +3,7 @@ let getData2 = async (url) => {
     fetch(url)
       .then((response) => {
         if (response.ok) {
+          console.log(response);
           resolve(response.json());
         } else {
           reject(response.status);
