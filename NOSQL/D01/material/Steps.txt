@@ -1,0 +1,15 @@
+1- DB installation
+2- add bin path server & shell to environment varaibles of OS
+3- Folder c-> Data-> db   port 27017  local host
+4- run mongoDB server  --> command mongod
+5- client mongo   JS shell 
+	https://stackoverflow.com/questions/51224959/mongo-is-not-recognized-as-an-internal-or-external-command-operable-program-o
+
+we can use
+client  Toold GIU Robo3T
+
+
+
+
+
+
