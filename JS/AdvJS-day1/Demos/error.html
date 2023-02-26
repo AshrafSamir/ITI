@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Untitled Document</title>
+
+</head>
+
+<body>
+    <script>
+        try {
+            setTimeout(function() {
+                try {
+                    console.lo("error in settimeout");
+                } catch (err) {
+                    
+                }
+            }, 2000);
+
+            console.log("inside try");
+        } catch (err) {
+            console.log("error"); ///
+        }
+
+        console.log("after timeout"); ///
+
+        /* onerror = function(msg, url, l, col) {
+            
+            console.log(arguments[4].name);
+            console.log(err.message);
+            return true;
+
+            //msg
+            //url
+            //l
+            //col
+            //err.name
+        }
+*/
+        console.log(x);
+        /*
+        try {
+            var val = parseInt(prompt("enter you val", 10))
+            //val[5-20]
+            if (val < 5)
+                throw new Error("value below expectations")
+            else if (val > 20)
+                throw "out of range"; //
+            else
+                console.log(val);
+        } catch (err) {
+            if (err instanceof Error) {
+                console.log(err.message);
+                console.log(err.name);
+                console.log("please try again");
+            }
+            if (err == "out of range") {
+                console.log("this is out of range value");
+            }
+
+
+        }
+        */
+        console.log("will be executed");
+    </script>
+
+</body></html>
