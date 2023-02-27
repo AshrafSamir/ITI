@@ -1,0 +1,178 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.section-padding {
+  padding: 2rem;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-top: 5rem;
+  width: 50%;
+}
+
+.App__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.body__todo-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #928f8f;
+  border-radius: 5px;
+}
+
+.form__inputs-title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.form__inputs-title input {
+  flex: 0.75;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+.form__inputs-title label {
+  flex: 0.25;
+}
+
+.form__inputs-time {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.form__inputs-time input {
+  flex: 0.25;
+  border-radius: 5px;
+  width: 20%;
+  outline: none;
+  border: none;
+}
+
+.form__inputs-time label {
+  flex: 0.25;
+}
+.form__inputs-time label:nth-child(3) {
+  margin-left: 0.5rem;
+}
+
+.form__inputs-date {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.form__inputs-date span {
+  flex: 1;
+  width: 100%;
+}
+.form__inputs-date span label {
+  width: 100%;
+  display: block;
+  padding: 0.5rem 0rem;
+}
+
+.form__inputs-date span select {
+  border-radius: 5px;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+.form__inputs-date span select {
+  border-radius: 5px;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+.form__inputs-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+}
+.form__inputs-submit input {
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.App__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  border-top: 1px solid #000;
+  margin-top: 1rem;
+}
+.App__footer-scroll {
+  flex: 1;
+}
+.App__footer-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  flex: 1;
+}
+.App__footer-input input {
+  text-align: center;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  width: 70%;
+}
+.App__footer-scroll {
+  width: 100%;
+  flex: 1;
+  border-right: 1px solid #000;
+  max-height: 4rem;
+  padding-left: 2rem;
+  /* overflow-x: hidden;
+  overflow-y: scroll; */
+}
