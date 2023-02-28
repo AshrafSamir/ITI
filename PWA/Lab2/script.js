@@ -1,12 +1,13 @@
 let tasks = [];
 
-let getTasks = () => {
-  idbApp.getTasks().then((tasks) => {
-    tasks.forEach((task) => {
-      tasks.push(task);
-      showTask(task);
-    });
-  });
+let getTasks = async () => {
+  tasks = await idbApp.getTasks()
+  tasks.forEach((task) => {
+    if(task.done === false){
+      displayNotification(task);
+    }
+  showTask(task);
+});
 };
 let processTask = (
   taskTitle,
@@ -25,6 +26,8 @@ let processTask = (
     taskYear === ""
   ) {
     throw new Error("Please fill in all fields");
+  }else if( tasks.filter((task) => task.title === taskTitle).length > 0){
+    throw new Error("Task already exists");
   } else {
     let task = {
       title: taskTitle,
@@ -77,38 +80,46 @@ let handleAddTask = () => {
   idbApp.addTask(task);
   showTask(task);
 
-  let date = new Date(taskYear, taskMonth, taskDay, taskHour, taskMin);
-  let milliseconds = date.getTime();
-  console.log(milliseconds);
-  var dateAct = new Date(milliseconds);
-  console.log(dateAct);
 
-  const options = {
-    body: taskTitle,
-    data: {
-      dateOfArrival: milliseconds,
-      primaryKey: 1,
-    },
-    actions: [
-      {
-        action: "explore",
-        title: "Go to the site",
-      },
-      {
-        action: "close",
-        title: "close the notification",
-      },
-    ],
-  };
-  displayNotification(options);
+  displayNotification(task);
 };
-function displayNotification(options) {
-  // TODO 2.3 - display a Notification
-  if (Notification.permission == "granted") {
-    navigator.serviceWorker.getRegistration().then((reg) => {
-      reg.showNotification("Hello World", options);
-    });
+function displayNotification(task) {
+  
+    if (Notification.permission == "granted") {
+      let date = new Date(task.year, task.month, task.day, task.hour, task.min);
+      let milliseconds = date.getTime();
+
+      const options = {
+        body: task.title,
+        data: {
+          dateOfArrival: milliseconds,
+          primaryKey: 1,
+        },
+        actions: [
+          {
+            action: "explore",
+            title: "Go to the site",
+          },
+          {
+            action: "close",
+            title: "close the notification",
+          },
+        ],
+      };
+      console.log( new Date(task.year, task.month, task.day, task.hour, task.min)- Date.now());
+     setTimeout(() => {
+      navigator.serviceWorker.getRegistration().then((reg) => {
+        reg.showNotification(task.title, options);
+      });
+      idbApp.updateTask(task);
+    }, new Date(task.year, task.month, task.day, task.hour, task.min)- Date.now()  );
   }
+  // TODO 2.3 - display a Notification
+  // if (Notification.permission == "granted") {
+  //   navigator.serviceWorker.getRegistration().then((reg) => {
+  //     reg.showNotification("Hello World", options);
+  //   });
+  // }
 }
 
 document.getElementById("App__addTask").addEventListener("click", () => {
@@ -200,6 +211,7 @@ var idbApp = (function () {
   }
 
   function deleteTask(taskTitle) {
+    tasks = tasks.filter((task) => task.title !== taskTitle);
     dbPromise
       .then(function (db) {
         var tx = db.transaction("tasks", "readwrite");
@@ -212,10 +224,36 @@ var idbApp = (function () {
       });
   }
 
+  function updateTask(task) {
+    getByName(task.title).then(function (task) {
+      task.done = !task.done;
+      dbPromise.then(function (db) {
+        var tx = db.transaction("tasks", "readwrite");
+        var store = tx.objectStore("tasks");
+        store.put(task);
+        return tx.complete;
+      });
+
+    });
+  
+
+  }
+  function getByName(title) {
+
+    // TODO 4.3 - use the get method to get an object by name
+    return dbPromise.then(function(db){
+      var tx = db.transaction('tasks','readonly')
+      var store = tx.objectStore('tasks')
+      return store.get(title)
+    })
+  }
+
   return {
     addTask: addTask,
     getTasks: getTasks,
     deleteTask: deleteTask,
+    updateTask: updateTask,
+    getByName: getByName,
   };
 })();
 
