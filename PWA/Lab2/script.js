@@ -45,6 +45,7 @@ let processTask = (
 let showTask = (task) => {
   let taskList = document.getElementById("App__taskList");
   let taskItem = document.createElement("li");
+  taskItem.id = task.title;
   let deleteButton = document.createElement("button");
   deleteButton.innerHTML = "X";
   deleteButton.addEventListener("click", () => {
@@ -59,6 +60,11 @@ let showTask = (task) => {
     `;
   taskItem.appendChild(deleteButton);
   taskList.appendChild(taskItem);
+  if(task.done){
+    taskItem.style.color = "red";
+    taskItem.style.textDecoration = "line-through";
+    taskItem.style.fontWeight = "0.5rem";
+  }
 };
 let handleAddTask = () => {
   let taskTitle = document.getElementById("title").value;
@@ -110,6 +116,10 @@ function displayNotification(task) {
      setTimeout(() => {
       navigator.serviceWorker.getRegistration().then((reg) => {
         reg.showNotification(task.title, options);
+        let taskItem = document.getElementById(task.title);
+        taskItem.style.color = "red";
+        taskItem.style.textDecoration = "line-through";
+        taskItem.style.fontWeight = "0.5rem";
       });
       idbApp.updateTask(task);
     }, new Date(task.year, task.month, task.day, task.hour, task.min)- Date.now()  );
