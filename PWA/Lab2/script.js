@@ -139,7 +139,6 @@ document.getElementById("App__addTask").addEventListener("click", () => {
 const app = (() => {
   "use strict";
 
-  let swRegistration = null;
 
   // TODO 2.1 - check for notification support
   if (!("Notification" in window)) {

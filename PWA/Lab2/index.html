@@ -21,52 +21,54 @@
 
           <div class="form__inputs-title">
             <label for="title">Task title:</label>
-            <input type="text" id="title" name="title" />
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Title is uniqe"
+            />
           </div>
           <div class="form__inputs-time">
             <label for="hour"> Hours (hh):</label>
-            <input type="number" id="hour" name="hour" />
+            <input
+              type="number"
+              id="hour"
+              name="hour"
+              placeholder="24-hour-clock"
+            />
             <label for="min"> Mins (mm):</label>
-            <input type="number" id="min" name="min" />
+            <input
+              type="number"
+              id="min"
+              name="min"
+              placeholder="Enter minute"
+            />
           </div>
           <div class="form__inputs-date">
             <span
               ><label for="day"> Day:</label>
-              <select name="day" id="day">
-                <option value="27">27</option>
-                <option value="28">28</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select></span
-            >
+              <input type="number" id="day" name="day" placeholder="Day" />
+            </span>
             <span>
               <label for="month"> Month:</label>
               <select name="month" id="month">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="3">5</option>
-                <option value="4">6</option>
-                <option value="1">7</option>
-                <option value="2">8</option>
-                <option value="3">9</option>
-                <option value="4">10</option>
-                <option value="3">11</option>
-                <option value="4">12</option>
+                <option value="0">1</option>
+                <option value="1">2</option>
+                <option value="2">3</option>
+                <option value="3">4</option>
+                <option value="4">5</option>
+                <option value="5">6</option>
+                <option value="6">7</option>
+                <option value="7">8</option>
+                <option value="8">9</option>
+                <option value="9">10</option>
+                <option value="10">11</option>
+                <option value="11">12</option>
               </select></span
             >
             <span>
               <label for="year"> Year:</label>
-              <select name="year" id="year">
-                <option value="2023">2023</option>
-                <option value="2024">2024</option>
-                <option value="2025">2025</option>
-                <option value="2026">2026</option>
-              </select>
+              <input type="number" id="year" name="year" placeholder="Year" />
             </span>
           </div>
           <div class="form__inputs-submit">
