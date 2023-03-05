@@ -236,7 +236,7 @@ var idbApp = (function () {
 
   function updateTask(task) {
     getByName(task.title).then(function (task) {
-      task.done = !task.done;
+      task.done = true;
       dbPromise.then(function (db) {
         var tx = db.transaction("tasks", "readwrite");
         var store = tx.objectStore("tasks");
