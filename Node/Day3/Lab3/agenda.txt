@@ -1,0 +1,4 @@
+1- Events ==> EventEmmiter [Angular]
+2- Custom Module [Create ur Own Module]
+<-After Break->
+3- Server [GET - POST - PUT -DELETE]
