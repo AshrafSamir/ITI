@@ -1,0 +1,20 @@
+<div>
+  <form (ngSubmit)="addStudent($event)">
+    <input
+      type="text"
+      [(ngModel)]="studentName"
+      name="studentName"
+      placeholder="Student Name"
+    />
+    <input
+      type="number"
+      [(ngModel)]="studentAge"
+      name="studentAge"
+      placeholder="Student Age"
+    />
+    <div *ngIf="validation">
+      <p class="error">not valid input</p>
+    </div>
+    <button type="submit">Add Student</button>
+  </form>
+</div>

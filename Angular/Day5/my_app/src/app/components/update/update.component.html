@@ -1,0 +1,67 @@
+<div class="container" *ngIf="student">
+  <form [formGroup]="this.myForm" (ngSubmit)="editStudent()">
+    <div>
+      <label for="name">Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        formControlName="name"
+        value="{{ this.student.name }}"
+      />
+    </div>
+    <div>
+      <label for="age">Age</label>
+      <input
+        type="text"
+        name="age"
+        id="age"
+        formControlName="age"
+        value="{{ this.student.age }}"
+      />
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input
+        type="text"
+        name="email"
+        id="email"
+        formControlName="email"
+        value="{{ this.student.email }}"
+      />
+    </div>
+    <div>
+      <label for="salary">Salary</label>
+      <input
+        type="text"
+        name="salary"
+        id="salary"
+        formControlName="salary"
+        value="{{ this.student.salary }}"
+      />
+    </div>
+    <div>
+      <label for="phone">Phone</label>
+      <input
+        type="text"
+        name="phone"
+        id="phone"
+        formControlName="phone"
+        value="{{ this.student.phone }}"
+      />
+    </div>
+    <div>
+      <label for="address">Address</label>
+      <input
+        type="text"
+        name="address"
+        id="address"
+        formControlName="address"
+        value="{{ this.student.address }}"
+      />
+    </div>
+    <div>
+      <button type="submit">Update Student</button>
+    </div>
+  </form>
+</div>

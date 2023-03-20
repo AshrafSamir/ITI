@@ -1,0 +1,24 @@
+h1 {
+  color: red;
+  font-size: 50px;
+  text-align: center;
+}
+div {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 20px;
+  color: black;
+}
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.active {
+  background-color: dodgerblue;
+  color: white;
+}

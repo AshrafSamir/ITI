@@ -1,0 +1,27 @@
+/* <div>
+  <a routerLinkActive="active" routerLink="home">
+    <h1>Home</h1>
+  </a>
+  <a routerLinkActive="active" routerLink="add">
+    <h1>Add Student</h1>
+  </a>
+</div>
+style this div */
+
+div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  background-color: #f1f1f1;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  color: #f00;
+}
+.active {
+  color: #f00;
+}

@@ -1,0 +1,20 @@
+
+<div *ngIf="students">
+  <h1>Student List</h1>
+  <ul>
+    <li *ngFor="let student of students">
+      <h2>{{ student.name }}</h2>
+      <h3>{{ student.age }}</h3>
+      <h3>{{ student.salary }}</h3>
+      <h3>{{ student.address }}</h3>
+      <h3>{{ student.email }}</h3>
+      <h3>{{ student.phone }}</h3>
+      <div>
+        <button (click)="deleteStudent(student)">Delete</button>
+      </div>
+      <div>
+        <button (click)="editStudent(student)">Edit</button>
+      </div>
+    </li>
+  </ul>
+</div>

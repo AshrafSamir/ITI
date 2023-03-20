@@ -1,0 +1,57 @@
+/* <div *ngIf="students">
+  <h1>Student List</h1>
+  <ul>
+    <li *ngFor="let student of students">
+      <h2>{{ student.name }}</h2>
+      <h3>{{ student.age }}</h3>
+      <h3>{{ student.salary }}</h3>
+      <h3>{{ student.address }}</h3>
+      <h3>{{ student.email }}</h3>
+      <h3>{{ student.phone }}</h3>
+      <div>
+        <button (click)="deleteStudent(student)">Delete</button>
+      </div>
+      <div>
+        <button (click)="editStudent(student)">Edit</button>
+      </div>
+    </li>
+  </ul>
+</div>
+style this component */
+
+div {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
+div button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+li {
+  list-style-type: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 1rem;
+}

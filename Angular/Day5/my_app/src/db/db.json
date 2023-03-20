@@ -1,0 +1,40 @@
+{
+  "students": [
+    {
+      "id": 3,
+      "name": "Ali",
+      "age": 22,
+      "email": "examplemail213@example.com",
+      "salary": 3000,
+      "phone": "0123456789",
+      "address": "Giza"
+    },
+    {
+      "id": 4,
+      "name": "Mohamed",
+      "age": 23,
+      "email": "examplemail213@example.com",
+      "salary": 4000,
+      "phone": "0123456789",
+      "address": "Aswan"
+    },
+    {
+      "id": 5,
+      "name": "Khaled",
+      "age": 24,
+      "email": "examplemail213@example.com",
+      "salary": 5000,
+      "phone": "0123456789",
+      "address": "Luxor"
+    },
+    {
+      "name": "Ashraf Samer",
+      "age": "13",
+      "email": "ashrafsamer423@gmail.com",
+      "phone": "+201156856210",
+      "address": "64 Wahba Ibraheem St, Hadayek Helwan",
+      "salary": "30000",
+      "id": 6
+    }
+  ]
+}
