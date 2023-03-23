@@ -4,6 +4,6 @@ export let CourseSchema = new mongoose.Schema({
     id: Number,
     name: String,
     description: String,
-    duration: Array,
+    duration: Number,
 
 })
