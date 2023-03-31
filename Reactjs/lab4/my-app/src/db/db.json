@@ -10,7 +10,11 @@
       "overview": "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.",
       "poster_path": "/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
       "media_type": "movie",
-      "genre_ids": [878, 12, 28],
+      "genre_ids": [
+        878,
+        12,
+        28
+      ],
       "popularity": 6789.789,
       "release_date": "2022-12-14",
       "video": false,
@@ -27,7 +31,11 @@
       "overview": "With the price on his head ever increasing, John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.",
       "poster_path": "/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg",
       "media_type": "movie",
-      "genre_ids": [28, 53, 80],
+      "genre_ids": [
+        28,
+        53,
+        80
+      ],
       "popularity": 2803.482,
       "release_date": "2023-03-22",
       "video": false,
@@ -44,7 +52,11 @@
       "overview": "Through a series of unfortunate events, three mummies end up in present-day London and embark on a wacky and hilarious journey in search of an old ring belonging to the Royal Family, stolen by ambitious archaeologist Lord Carnaby.",
       "poster_path": "/qVdrYN8qu7xUtsdEFeGiIVIaYd.jpg",
       "media_type": "movie",
-      "genre_ids": [16, 35, 10751],
+      "genre_ids": [
+        16,
+        35,
+        10751
+      ],
       "popularity": 446.228,
       "release_date": "2023-01-05",
       "video": false,
@@ -61,7 +73,9 @@
       "overview": "A stubborn and hotheaded minor league basketball coach is forced to train a Special Olympics team when he is sentenced to community service.",
       "poster_path": "/i46Gke8Kg3uH2K5eM0rDo4HzPtq.jpg",
       "media_type": "movie",
-      "genre_ids": [35],
+      "genre_ids": [
+        35
+      ],
       "popularity": 38.016,
       "release_date": "2023-03-09",
       "video": false,
@@ -78,7 +92,10 @@
       "overview": "After their pilot dies unexpectedly mid-flight, passenger Doug White must safely land a plane and save his entire family from insurmountable danger.",
       "poster_path": "/wx3U05u7Yq7Nu9xw75LfhqaSPP5.jpg",
       "media_type": "movie",
-      "genre_ids": [18, 53],
+      "genre_ids": [
+        18,
+        53
+      ],
       "popularity": 19.575,
       "release_date": "2023-04-06",
       "video": false,
@@ -98,7 +115,11 @@
       "overview": "A charming thief and a band of unlikely adventurers undertake an epic heist to retrieve a lost relic, but things go dangerously awry when they run afoul of the wrong people.",
       "poster_path": "/6LuXaihVIoJ5FeSiFb7CZMtU7du.jpg",
       "media_type": "movie",
-      "genre_ids": [12, 14, 35],
+      "genre_ids": [
+        12,
+        14,
+        35
+      ],
       "popularity": 412.073,
       "release_date": "2023-03-24",
       "video": false,
@@ -115,7 +136,11 @@
       "overview": "Billy Batson and his foster siblings, who transform into superheroes by saying \"Shazam!\", are forced to get back into action and fight the Daughters of Atlas, who they must stop from using a weapon that could destroy the world.",
       "poster_path": "/3GrRgt6CiLIUXUtoktcv1g2iwT5.jpg",
       "media_type": "movie",
-      "genre_ids": [28, 35, 14],
+      "genre_ids": [
+        28,
+        35,
+        14
+      ],
       "popularity": 720.071,
       "release_date": "2023-03-15",
       "video": false,
@@ -132,7 +157,10 @@
       "overview": "Ex-hitman John Wick comes out of retirement to track down the gangsters that took everything from him.",
       "poster_path": "/nCzzQKGijVzfGFg42id7uDLOjY5.jpg",
       "media_type": "movie",
-      "genre_ids": [28, 53],
+      "genre_ids": [
+        28,
+        53
+      ],
       "popularity": 534.017,
       "release_date": "2014-10-22",
       "video": false,
@@ -149,7 +177,11 @@
       "overview": "Super-assassin John Wick returns with a $14 million price tag on his head and an army of bounty-hunting killers on his trail. After killing a member of the shadowy international assassin’s guild, the High Table, John Wick is excommunicado, but the world’s most ruthless hit men and women await his every turn.",
       "poster_path": "/ziEuG1essDuWuC5lpWUaw1uXY2O.jpg",
       "media_type": "movie",
-      "genre_ids": [28, 53, 80],
+      "genre_ids": [
+        28,
+        53,
+        80
+      ],
       "popularity": 795.388,
       "release_date": "2019-05-15",
       "video": false,
@@ -166,7 +198,11 @@
       "overview": "A female boxing trainer discovers that her champion cage-fighter boyfriend has been cheating on her with her sister and decides to seek revenge by training up his arch-rival to challenge him.",
       "poster_path": "/3wkrRKMFRwCpjp1U27914oRbcqH.jpg",
       "media_type": "movie",
-      "genre_ids": [18, 10749, 28],
+      "genre_ids": [
+        18,
+        10749,
+        28
+      ],
       "popularity": 802.067,
       "release_date": "2023-02-16",
       "video": false,
@@ -183,7 +219,12 @@
       "overview": "While working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi.",
       "poster_path": "/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
       "media_type": "movie",
-      "genre_ids": [16, 12, 10751, 14],
+      "genre_ids": [
+        16,
+        12,
+        10751,
+        14
+      ],
       "popularity": 876.478,
       "release_date": "2023-03-30",
       "video": false,
@@ -203,7 +244,11 @@
       "overview": "An aging Chinese immigrant is swept up in an insane adventure, where she alone can save what's important to her by connecting with the lives she could have led in other universes.",
       "poster_path": "/w3LxiVYdWWRvEVdn5RYq6jIqkb1.jpg",
       "media_type": "movie",
-      "genre_ids": [28, 12, 878],
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
       "popularity": 249.478,
       "release_date": "2022-03-24",
       "video": false,
@@ -220,7 +265,11 @@
       "overview": "John Wick is forced out of retirement by a former associate looking to seize control of a shadowy international assassins’ guild. Bound by a blood oath to aid him, Wick travels to Rome and does battle against some of the world’s most dangerous killers.",
       "poster_path": "/hXWBc0ioZP3cN4zCu6SN3YHXZVO.jpg",
       "media_type": "movie",
-      "genre_ids": [28, 53, 80],
+      "genre_ids": [
+        28,
+        53,
+        80
+      ],
       "popularity": 894.616,
       "release_date": "2017-02-08",
       "video": false,
@@ -237,7 +286,11 @@
       "overview": "After a heroic job of successfully landing his storm-damaged aircraft in a war zone, a fearless pilot finds himself between the agendas of multiple militias planning to take the plane and its passengers hostage.",
       "poster_path": "/qi9r5xBgcc9KTxlOLjssEbDgO0J.jpg",
       "media_type": "movie",
-      "genre_ids": [28, 12, 53],
+      "genre_ids": [
+        28,
+        12,
+        53
+      ],
       "popularity": 1001.16,
       "release_date": "2023-01-12",
       "video": false,
@@ -254,7 +307,10 @@
       "overview": "A flight attendant and her boyfriend must steal a cache of diamonds to clear an old debt — but the plan spins into a mayhem when the plane gets hijacked.",
       "poster_path": "/1MIDERaEUMw1rYDM99tGZPY80Ap.jpg",
       "media_type": "movie",
-      "genre_ids": [80, 53],
+      "genre_ids": [
+        80,
+        53
+      ],
       "popularity": 99.949,
       "release_date": "2023-03-24",
       "video": false,
@@ -271,7 +327,11 @@
       "overview": "Paul Baumer and his friends Albert and Muller, egged on by romantic dreams of heroism, voluntarily enlist in the German army. Full of excitement and patriotic fervour, the boys enthusiastically march into a war they believe in. But once on the Western Front, they discover the soul-destroying horror of World War I.",
       "poster_path": "/2IRjbi9cADuDMKmHdLK7LaqQDKA.jpg",
       "media_type": "movie",
-      "genre_ids": [18, 10752, 36],
+      "genre_ids": [
+        18,
+        10752,
+        36
+      ],
       "popularity": 347.997,
       "release_date": "2022-10-07",
       "video": false,
@@ -288,7 +348,12 @@
       "overview": "Suzume, 17, lost her mother as a little girl. On her way to school, she meets a mysterious young man. But her curiosity unleashes a calamity that endangers the entire population of Japan, and so Suzume embarks on a journey to set things right.",
       "poster_path": "/x5CrIflmv8WZJeLv7V611aRGbPs.jpg",
       "media_type": "movie",
-      "genre_ids": [16, 18, 12, 14],
+      "genre_ids": [
+        16,
+        18,
+        12,
+        14
+      ],
       "popularity": 329.434,
       "release_date": "2022-11-11",
       "video": false,
@@ -305,12 +370,25 @@
       "overview": "When a lively young family moves in next door, grumpy widower Otto Anderson meets his match in a quick-witted, pregnant woman named Marisol, leading to an unlikely friendship that turns his world upside down.",
       "poster_path": "/130H1gap9lFfiTF9iDrqNIkFvC9.jpg",
       "media_type": "movie",
-      "genre_ids": [35, 18],
+      "genre_ids": [
+        35,
+        18
+      ],
       "popularity": 469.664,
       "release_date": "2022-12-28",
       "video": false,
       "vote_average": 7.891,
       "vote_count": 901
+    },
+    {
+      "title": "Ashraf",
+      "overview": "Hello every one",
+      "backdrop_path": "/qmEKe0AEsns2WXinbkGxlCxlTHq.jpg",
+      "popularity": 0,
+      "release_date": "2023-03-31T05:08:55.030Z",
+      "vote_average": 0,
+      "vote_count": 0,
+      "id": 1018229
     }
   ]
 }

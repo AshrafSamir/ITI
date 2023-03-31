@@ -4,6 +4,7 @@ function About() {
   return (
     <Card className="bg-dark text-white">
       <Card.Img
+        className="mt-3 mb-3"
         src="https://image.tmdb.org/t/p/original/i8dshLvq4LE3s0v8PrkDdUyb1ae.jpg"
         alt="Card image"
       />

@@ -31,10 +31,24 @@ export default function MyNavbar() {
             >
               About
             </Link>
+            <Link
+              style={{
+                color: "white",
+                textDecoration: "none",
+                marginRight: "10px",
+              }}
+              to={"movie/add"}
+            >
+              Add
+            </Link>
           </Nav>
         </Container>
       </Navbar>
-      <Outlet />
+      <div className="container mt-5">
+        <div className="row">
+          <Outlet />
+        </div>
+      </div>
     </>
   );
 }
