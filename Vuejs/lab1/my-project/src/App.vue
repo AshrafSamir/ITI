@@ -18,7 +18,7 @@
     </div>
     <button type="submit">Add Client</button>
   </form>
-  <client-table :clients="clients" />
+  <client-table @delete="handleDelete" />
 </template>
 
 <script>
@@ -28,6 +28,12 @@ export default {
   name: "App",
   components: {
     ClientTable,
+  },
+  provide() {
+    console.log("here");
+    return {
+      clients: this.clients,
+    };
   },
   data() {
     return {
@@ -54,6 +60,10 @@ export default {
       });
       this.id++;
       console.log(this.clients);
+    },
+    handleDelete(id) {
+      console.log("here1", id);
+      this.clients = this.clients.filter((client) => client.id !== id);
     },
   },
 };

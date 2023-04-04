@@ -23,18 +23,28 @@
         <th>Age</th>
         <th>Role</th>
       </tr>
-      <tr v-for="client in clients" :key="client.id">
+      <tr v-for="client in injectedClients" :key="client.id">
         <template v-if="showUsers && !client.admin">
           <td>{{ client.firstName }}</td>
           <td>{{ client.lastName }}</td>
           <td>{{ client.age }}</td>
           <td>{{ client.admin ? "admin" : "user" }}</td>
+          <td>
+            <button class="delete" @click="() => handleDelete(client.id)">
+              delete
+            </button>
+          </td>
         </template>
         <template v-if="showAdmins && client.admin">
           <td>{{ client.firstName }}</td>
           <td>{{ client.lastName }}</td>
           <td>{{ client.age }}</td>
           <td>{{ client.admin ? "admin" : "user" }}</td>
+          <td>
+            <button class="delete" @click="() => handleDelete(client.id)">
+              delete
+            </button>
+          </td>
         </template>
       </tr>
     </table>
@@ -43,18 +53,19 @@
 
 <script>
 export default {
+  inject: ["clients"],
+  created() {
+    console.log(this.clients); // injected value
+  },
+
   name: "ClientTable",
+
   data() {
     return {
       showUsers: false,
       showAdmins: false,
+      injectedClients: this.clients,
     };
-  },
-  props: {
-    clients: {
-      type: Array,
-      required: true,
-    },
   },
   methods: {
     handleShowUsers() {
@@ -62,6 +73,13 @@ export default {
     },
     handleShowAdmins() {
       this.showAdmins = !this.showAdmins;
+    },
+    handleDelete(id) {
+      this.injectedClients = this.injectedClients.filter(
+        (client) => client.id !== id
+      );
+      //send data to parent
+      this.$emit("delete", id);
     },
   },
 };
@@ -103,5 +121,15 @@ td:nth-child(4)::first-letter {
 .active {
   background-color: #4caf50;
   color: white;
+}
+
+.delete {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 </style>
