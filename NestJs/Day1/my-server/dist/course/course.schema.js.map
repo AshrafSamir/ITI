@@ -1,0 +1,1 @@
+{"version":3,"file":"course.schema.js","sourceRoot":"","sources":["../../src/course/course.schema.ts"],"names":[],"mappings":";;;AAAA,qCAAoC;AAEzB,QAAA,YAAY,GAAG,IAAI,QAAQ,CAAC,MAAM,CAAC;IAC1C,EAAE,EAAE,MAAM;IACV,IAAI,EAAE,MAAM;IACZ,WAAW,EAAE,MAAM;IACnB,QAAQ,EAAE,KAAK;CAElB,CAAC,CAAA"}

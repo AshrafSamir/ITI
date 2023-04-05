@@ -1,0 +1,18 @@
+{
+  "clients": [
+    {
+      "firstName": "Ashraf",
+      "lastName": "ahmed",
+      "age": 23,
+      "admin": true,
+      "id": 1
+    },
+    {
+      "firstName": "Mahmoud",
+      "lastName": "Ahmed",
+      "age": 23,
+      "admin": true,
+      "id": 2
+    }
+  ]
+}

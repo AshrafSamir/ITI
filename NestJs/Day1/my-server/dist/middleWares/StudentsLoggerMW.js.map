@@ -1,0 +1,1 @@
+{"version":3,"file":"StudentsLoggerMW.js","sourceRoot":"","sources":["../../src/middleWares/StudentsLoggerMW.ts"],"names":[],"mappings":";;;AAGA,MAAa,gBAAgB;IACzB,GAAG,CAAC,GAAY,EAAE,GAAa,EAAE,IAAkB;QAE/C,OAAO,CAAC,GAAG,CAAC,GAAG,CAAC,IAAI,CAAC,CAAA;QACrB,IAAI,EAAE,CAAA;IACV,CAAC;CAGJ;AARD,4CAQC"}

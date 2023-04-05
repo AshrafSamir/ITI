@@ -1,0 +1,1 @@
+{"version":3,"file":"CoursesLoggerMW.js","sourceRoot":"","sources":["../../src/middleWares/CoursesLoggerMW.ts"],"names":[],"mappings":";;;AAGA,MAAa,eAAe;IACxB,GAAG,CAAC,GAAY,EAAE,GAAa,EAAE,IAAkB;QAE/C,OAAO,CAAC,GAAG,CAAC,GAAG,CAAC,IAAI,CAAC,CAAA;QACrB,IAAI,EAAE,CAAA;IACV,CAAC;CAGJ;AARD,0CAQC"}
