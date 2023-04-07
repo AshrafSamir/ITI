@@ -2,16 +2,16 @@
   <div class="myCard-container m-2">
     <div class="card-image">
       <img :src="game.thumbnail" alt="card image" />
-      <RateComponent class="card-image__rate" />
+      <RateComponent v-if="!showInfo" class="card-image__rate" />
     </div>
     <div class="card-content">
-      <!-- <h2>{{ game.title }}</h2> -->
+      <h2 v-if="showInfo">{{ game.title }}</h2>
       <h3>{{ subtitle }}</h3>
-      <p class="description">{{ game.short_description }}</p>
-      <span>{{ downloads }}</span>
-    </div>
-    <div class="card-footer">
-      <ButtonComponent />
+      <p :class="{ description: !showInfo }">{{ game.short_description }}</p>
+      <span v-if="showInfo">{{ downloads }}</span>
+      <div class="card-button">
+        <ButtonComponent @click="handleDetails" />
+      </div>
     </div>
   </div>
 </template>
@@ -26,21 +26,25 @@ export default {
     ButtonComponent,
     RateComponent,
   },
+  emits: ["sendId"],
+  methods: {
+    handleDetails() {
+      //emit id to parent
+      this.$emit("sendId", this.game.id);
+    },
+  },
   setup() {
     const image = ref("https://www.freetogame.com/g/540/thumbnail.jpg");
-    // const title = ref("");
     const subtitle = ref("");
-    // const description = ref(
-    //   "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-    // );
-    const downloads = ref("");
+    const downloads = ref("300K Downloads");
+
     return {
       image,
       subtitle,
       downloads,
     };
   },
-  props: ["game"],
+  props: ["game", "showInfo"],
 };
 </script>
 
@@ -66,7 +70,7 @@ export default {
   left: 0;
   margin: 1rem;
 }
-.card-footer {
+.card-button {
   width: 100%;
 }
 .card-content {
