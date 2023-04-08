@@ -80,9 +80,7 @@ export default {
   height: 6rem;
   margin-bottom: 4rem;
 }
-.d-flex {
-  gap: 30rem;
-}
+
 .icons svg {
   margin-right: 1.5rem;
 }

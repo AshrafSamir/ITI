@@ -45,19 +45,15 @@
             </svg>
           </div>
         </div>
-        <div>
-          <div class="row">
-            <div
-              v-for="game in only5Games"
-              :key="game.id"
-              class="games-container__cards__card col-4 col-sm-3 col-md-2"
-            >
-              <card-component
-                @sendId="handleSendId"
-                :game="game"
-              ></card-component>
-            </div>
-          </div>
+      </div>
+      <div>
+        <div class="row justify-content-center">
+          <template v-for="game in only5Games" :key="game.id">
+            <card-component
+              @sendId="handleSendId"
+              :game="game"
+            ></card-component>
+          </template>
         </div>
       </div>
     </div>

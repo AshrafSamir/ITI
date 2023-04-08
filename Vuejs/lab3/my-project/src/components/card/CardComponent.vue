@@ -1,5 +1,5 @@
 <template>
-  <div class="myCard-container m-2">
+  <div class="myCard-container">
     <div class="card-image">
       <img :src="game.thumbnail" alt="card image" />
       <RateComponent v-if="!showInfo" class="card-image__rate" />
@@ -96,5 +96,11 @@ export default {
 .myCard-container:hover {
   transform: scale(1.05);
   transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .myCard-container {
+    width: 100%;
+  }
 }
 </style>

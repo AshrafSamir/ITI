@@ -95,4 +95,23 @@ export default {
   padding: 2rem;
   margin: auto;
 }
+
+@media screen and (max-width: 1015px) {
+  .card-details .myCard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.5rem;
+  }
+
+  .card-details .myCard-container img {
+    width: 100%;
+    border-radius: 0;
+  }
+  .card-details .myCard-container .card-image {
+    width: 100%;
+  }
+}
 </style>
