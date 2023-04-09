@@ -1,8 +1,19 @@
 <template>
   <div class="App bg-light">
     <NavBar />
+    <loginModal />
     <div class="card-details container">
-      <cardComponent :showInfo="true" :game="game" />
+      <cardComponent
+        @toggleAppearance="($event) => (showComp = !showComp)"
+        :showInfo="true"
+        :game="game"
+      />
+      <details-container
+        :game="game"
+        :class="{
+          'd-none': showComp,
+        }"
+      />
     </div>
     <CardContainer
       @sendId="handleId"
@@ -21,6 +32,8 @@
 import CardComponent from "./components/card/CardComponent.vue";
 import CardContainer from "./containers/cardContainer/CardContainer.vue";
 import NavBar from "./components/navbar/NavBar.vue";
+import LoginModal from "./components/login/LoginModal.vue";
+import DetailsContainer from "./containers/detailsContainer/DetailsContainer.vue";
 
 export default {
   name: "App",
@@ -28,6 +41,8 @@ export default {
     CardContainer,
     CardComponent,
     NavBar,
+    LoginModal,
+    DetailsContainer,
   },
   data() {
     return {
@@ -45,6 +60,7 @@ export default {
         release_date: "1997-01-07",
         freetogame_profile_url: "https://www.freetogame.com/tibia",
       },
+      showComp: true,
     };
   },
   methods: {

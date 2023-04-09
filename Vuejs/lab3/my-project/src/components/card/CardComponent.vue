@@ -18,8 +18,8 @@
 
 <script>
 import { ref } from "vue";
-import ButtonComponent from "./elements/ButtonComponent.vue";
-import RateComponent from "./elements/RateComponent.vue";
+import ButtonComponent from "../button/ButtonComponent.vue";
+import RateComponent from "../rate/RateComponent.vue";
 
 export default {
   components: {
@@ -31,6 +31,9 @@ export default {
     handleDetails() {
       //emit id to parent
       this.$emit("sendId", this.game.id);
+      if (this.showInfo) {
+        this.$emit("toggleAppearance");
+      }
     },
   },
   setup() {

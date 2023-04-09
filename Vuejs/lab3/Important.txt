@@ -1,0 +1,5 @@
+Run Json-server before running the project
+
+1) go to data file
+2) run command   `json-server content.json --watch`
+3) then open the Vue project with `npm run serve`

@@ -1,6 +1,6 @@
 <template>
-  <nav class="navbar navbar-light bg-white">
-    <div class="container-fluid d-flex justify-content-around">
+  <nav class="navbar navbar-light bg-white shadow">
+    <div class="container-fluid d-flex justify-content-around flex-nowrap">
       <div class="logo">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -53,6 +53,9 @@
           />
         </svg>
         <svg
+          role="button"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
           xmlns="http://www.w3.org/2000/svg"
           width="16"
           height="16"
@@ -64,14 +67,19 @@
             d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
           />
         </svg>
+        <LoginModal />
       </div>
     </div>
   </nav>
 </template>
 
 <script>
+import LoginModal from "../login/LoginModal.vue";
 export default {
   name: "NavBar",
+  components: {
+    LoginModal,
+  },
 };
 </script>
 

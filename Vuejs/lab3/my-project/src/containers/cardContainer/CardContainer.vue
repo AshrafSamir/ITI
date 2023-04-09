@@ -91,7 +91,6 @@ export default {
       this.hideData = false;
     },
     handleSendId(id) {
-      console.log(id, "here");
       this.$emit("sendId", id);
     },
   },
