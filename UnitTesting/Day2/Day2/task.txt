@@ -1,0 +1,4 @@
+1- js file --> jasmine
+2- node --> test endpoint " test two endpoints --> request "bonus" "
+3- angular "check other components"
+4- react "100%"
