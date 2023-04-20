@@ -1,0 +1,30 @@
+{
+  "dashboard": [
+    {
+      "posts": 5,
+      "likes": 100,
+      "followers": 200,
+      "following": 10
+    }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "title": "swimming",
+      "category": "sport",
+      "description": "description title 1"
+    },
+    {
+      "id": 2,
+      "title": "title 2",
+      "category": "education",
+      "description": "description title 2"
+    },
+    {
+      "id": 3,
+      "title": "football",
+      "category": "sport",
+      "description": "description title 3"
+    }
+  ]
+}
