@@ -1,8 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import { auto } from "@popperjs/core";
+import { useSession, signIn, signOut } from "next-auth/react";
 
-export default function navbar() {
+export default function Navbar() {
+  const { data: session, status } = useSession();
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light px-3">
       <a className="navbar-brand">GameLab</a>
@@ -24,11 +25,36 @@ export default function navbar() {
               Home
             </Link>
           </li>
-          <li className="nav-item " style={{ marginLeft: "auto" }}>
-            <Link className="nav-link " href="/home/addgame">
-              <span>Add&#43;</span>
-            </Link>
-          </li>
+          <div className="d-flex flex-row" style={{ marginLeft: "auto" }}>
+            {session?.user ? (
+              <>
+                <li className="nav-item ">
+                  <Link className="nav-link " href="/home/addgame">
+                    <span>Add&#43;</span>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    className="nav-link"
+                    href="/api/auth/signout"
+                    onClick={() => signOut()}
+                  >
+                    <span>Sign Out</span>
+                  </Link>
+                </li>
+              </>
+            ) : (
+              <li className="nav-item">
+                <Link
+                  className="nav-link"
+                  href="/api/auth/signin"
+                  onClick={() => signIn}
+                >
+                  <span>Sign In</span>
+                </Link>
+              </li>
+            )}
+          </div>
         </ul>
       </div>
     </nav>
