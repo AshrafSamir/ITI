@@ -4,15 +4,17 @@ import { getSession } from "next-auth/react";
 
 export default function index({ games }) {
   return (
-    <div className="container mt-5">
-      <div className="row justify-content-center">
-        {games ? (
-          games.map((game) => (
-            <GameCard game={game} key={game.id} className="col-md-3 " />
-          ))
-        ) : (
-          <h1>Loading...</h1>
-        )}
+    <div >
+      <div className="container mt-5">
+        <div className="row justify-content-center">
+          {games ? (
+            games.map((game) => (
+              <GameCard game={game} key={game.id} className="col-md-3 " />
+            ))
+          ) : (
+            <h1>Loading...</h1>
+          )}
+        </div>
       </div>
     </div>
   );

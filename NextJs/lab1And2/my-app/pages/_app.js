@@ -3,6 +3,8 @@ import "@/styles/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "@/components/Navbar";
 import { SessionProvider } from "next-auth/react";
+// import font awesome
+import "@fortawesome/fontawesome-free/css/all.css";
 
 export default function App({
   Component,

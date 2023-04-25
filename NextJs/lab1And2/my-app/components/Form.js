@@ -106,7 +106,8 @@ export default function Form({ formType, game }) {
       <Link
         href="/home"
         type="button"
-        class="btn btn-success"
+        class="btn "
+        style={{ backgroundColor: "#212A3E", color: "white" }}
         onClick={formType == "add" ? handleAddGame : handleUpdateGame}
       >
         {formType == "add" ? "Add game" : "Update game"}

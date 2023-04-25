@@ -14,7 +14,12 @@ export default function gameId({ game }) {
           />
           <div className="card-body">
             <p className="card-text">{game.short_description}</p>
-            <Link href={`/home`} className="btn btn-primary">
+            <Link
+              href={`/home`}
+              className="btn "
+              style={{ backgroundColor: "#212A3E", color: "white" }}
+            >
+              {" "}
               Home
             </Link>
           </div>

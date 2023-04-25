@@ -5,8 +5,13 @@ import { useSession, signIn, signOut } from "next-auth/react";
 export default function Navbar() {
   const { data: session, status } = useSession();
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light px-3">
-      <a className="navbar-brand">GameLab</a>
+    <nav
+      className="navbar navbar-expand-lg navbar-light bg-light px-3"
+      style={{ backgroundColor: "#394867 !important" }}
+    >
+      <a className="navbar-brand" style={{ color: "white" }}>
+        GameLab
+      </a>
       <button
         className="navbar-toggler"
         type="button"
@@ -21,7 +26,7 @@ export default function Navbar() {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav w-100">
           <li className="nav-item">
-            <Link className="nav-link" href="/home">
+            <Link className="nav-link" href="/home" style={{ color: "white" }}>
               Home
             </Link>
           </li>
@@ -29,14 +34,19 @@ export default function Navbar() {
             {session?.user ? (
               <>
                 <li className="nav-item ">
-                  <Link className="nav-link " href="/home/addgame">
+                  <Link
+                    className="nav-link "
+                    href="/home/addgame"
+                    style={{ color: "white" }}
+                  >
                     <span>Add&#43;</span>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
+                    style={{ color: "white" }}
                     className="nav-link"
-                    href="/api/auth/signout"
+                    href="/home"
                     onClick={() => signOut()}
                   >
                     <span>Sign Out</span>
@@ -46,8 +56,9 @@ export default function Navbar() {
             ) : (
               <li className="nav-item">
                 <Link
+                  style={{ color: "white" }}
                   className="nav-link"
-                  href="/api/auth/signin"
+                  href="/signin"
                   onClick={() => signIn}
                 >
                   <span>Sign In</span>
