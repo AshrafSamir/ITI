@@ -1,0 +1,64 @@
+-- Inserting into Track table
+INSERT INTO Track (name)
+VALUES
+  ('Telecom'),
+  ('OpenSource'),
+  ('Java'),
+  ('Game'),
+  ('Web Development');
+
+-- Inserting into Student table
+INSERT INTO Student (name, email, address, track_id)
+VALUES
+  ('Ahmed Mohamed', 'ahmed@example.com', '123 Triangle Street, Cairo', 1),
+  ('Fatma Ali', 'fatma@example.com', '456 Nile Street, Giza', 2),
+  ('Mahmoud Abdullah', 'mahmoud@example.com', '789 Pyramids Street, Alexandria', 3),
+  ('Nora Abdelrahman', 'nora@example.com', '321 Maadi Street, Cairo', 4),
+  ('Youssef Hassan', 'youssef@example.com', '555 Zamalek Street, Cairo', 1);
+
+-- Inserting into Phone_Number table
+INSERT INTO Phone_Number (student_id, phone_number)
+VALUES
+  (1, '01012345678'),
+  (2, '01123456789'),
+  (3, '01234567890'),
+  (4, '01098765432'),
+  (5, '01122334455');
+
+
+
+-- Inserting into Subject table
+INSERT INTO Subject (name, description, max_score)
+VALUES
+  ('C', 'Introduction to C programming language', 100),
+  ('CPP', 'Introduction to C++ programming language', 100),
+  ('HTML', 'Introduction to HTML and web development', 100),
+  ('Java', 'Introduction to Java programming language', 100),
+  ('Database', 'Introduction to database concepts and SQL', 100);
+
+-- Inserting into Track_Subject table
+INSERT INTO Track_Subject (track_id, subject_id)
+VALUES
+  (1, 1),
+  (1, 2),
+  (2, 3),
+  (3, 4),
+  (4, 5);
+
+-- Inserting into Student_Subject table
+INSERT INTO Student_Subject (student_id, subject_id)
+VALUES
+  (1, 1),
+  (1, 2),
+  (2, 3),
+  (3, 4),
+  (4, 5);
+
+-- Inserting into Exam table
+INSERT INTO Exam (student_id, subject_id, exam_date, score)
+VALUES
+  (1, 1, '2023-04-01', 85),
+  (1, 2, '2023-04-03', 92),
+  (2, 3, '2023-04-02', 78),
+  (3, 4, '2023-04-05', 88),
+  (4, 5, '2023-04-04', 95);

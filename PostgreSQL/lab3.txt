@@ -1,0 +1,97 @@
+1- CREATE TYPE gender_enum AS ENUM ('male', 'female');
+
+ALTER TABLE Student
+ADD COLUMN gender gender_enum;
+
+
+2- CREATE TYPE gender_enum AS ENUM ('male', 'female');
+ 
+ALTER TABLE Student
+ADD COLUMN gender gender_enum;
+
+3- ALTER TABLE Student
+ADD COLUMN birth_date date;
+
+4- -- Add new columns
+ALTER TABLE Student
+ADD COLUMN first_name VARCHAR(255),
+ADD COLUMN last_name VARCHAR(255);
+
+-- Update values for first_name and last_name from the existing name column
+UPDATE Student SET first_name = substring(name from 1 for position(' ' in name) - 1),
+                   last_name = substring(name from position(' ' in name) + 1);
+
+-- Remove the name column
+ALTER TABLE Student
+DROP COLUMN name;
+
+
+5- ALTER TABLE track
+ADD COLUMN new_track_id SMALLINT;
+
+UPDATE track
+SET new_track_id = track_id;
+
+ALTER TABLE track
+DROP COLUMN track_id;
+
+ALTER TABLE track
+RENAME COLUMN new_track_id TO track_id;
+
+
+6- ALTER TABLE Student
+ADD CONSTRAINT fk_track_id FOREIGN KEY (track_id) REFERENCES Track(track_id);
+
+7- 
+
+8- SELECT * FROM student
+
+9- SELECT * FROM student 
+WHERE gender = "male"
+
+10- SELECT COUNT(*) AS female_count FROM Student WHERE gender = 'female';
+
+11- SELECT * FROM Student WHERE birth_date < '1992-10-01';
+
+
+12- SELECT * FROM Student WHERE gender = 'male' AND birth_date < '1991-10-01';
+
+13- SELECT name, max_score FROM Subject ORDER BY max_score ASC;
+
+14- SELECT name, max_score FROM Subject ORDER BY max_score DESC LIMIT 1;
+
+15- SELECT name FROM Student WHERE name LIKE 'A%';
+
+16- SELECT COUNT(*) AS mohammed_count FROM Student WHERE name = 'Mohammed';
+
+17- SELECT gender, COUNT(*) AS gender_count FROM Student GROUP BY gender;
+
+18- SELECT first_name, COUNT(*) AS name_count
+FROM Student
+GROUP BY first_name
+HAVING COUNT(*) >= 2;
+
+19- SELECT s.*, t.track_name
+FROM Student s JOIN Track t 
+ON s.track_id = t.track_id;
+
+20- SELECT s.name AS student_name, e.score, subj.name AS subject_name
+FROM Student s
+JOIN Exam e ON s.student_id = e.student_id
+JOIN Subject subj ON e.subject_id = subj.subject_id;
+
+
+
+1- BEGIN;
+INSERT INTO Student (track_id, gender, birth_date, first_name, last_name)
+VALUES (2 ,'Male', '1995-05-15', 'Mahmoud, 'Mohammed');
+
+INSERT INTO Exam (student_id, subject_id, exam_date, score)
+VALUES (21, 1, '2023-04-04', 85);
+COMMIT;
+
+2- BEGIN;
+
+INSERT INTO Exam (student_id, subject_id, exam_date, score)
+VALUES (21, 3, '2023-04-05', 90), (21, 2, '2023-04-06', 95);
+ROLLBACK;

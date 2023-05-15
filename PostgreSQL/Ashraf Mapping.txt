@@ -1,0 +1,28 @@
+Student (student_id, name, email, address, track_id)
+PK: student_id
+FK: track_id
+
+Phone_Number (phone_number_id, student_id, phone_number)
+PK: phone_number_id
+FK: student_id 
+
+Track (track_id, name)
+PK: track_id
+
+Subject (subject_id, name, description, max_score)
+PK: subject_id
+
+Track_Subject (track_id, subject_id)
+PK: (track_id, subject_id)
+FK1: track_id 
+FK2: subject_id 
+
+Student_Subject (student_id, subject_id)
+PK: (student_id, subject_id)
+FK1: student_id 
+FK2: subject_id 
+
+Exam (exam_id, student_id, subject_id, exam_date, score)
+PK: exam_id
+FK1: student_id 
+FK2: subject_id 

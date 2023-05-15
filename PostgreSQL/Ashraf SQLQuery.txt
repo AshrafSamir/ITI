@@ -1,0 +1,53 @@
+CREATE TABLE Track (
+  track_id SERIAL PRIMARY KEY,
+  name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Student (
+  student_id SERIAL PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  email VARCHAR(50) NOT NULL,
+  address VARCHAR(100) NOT NULL,
+  track_id INT,
+  FOREIGN KEY (track_id) REFERENCES Track(track_id)
+);
+
+CREATE TABLE Phone_Number (
+  phone_number_id SERIAL PRIMARY KEY,
+  student_id INT NOT NULL,
+  phone_number VARCHAR(20) NOT NULL,
+  FOREIGN KEY (student_id) REFERENCES Student(student_id)
+);
+
+CREATE TABLE Subject (
+  subject_id SERIAL PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  description VARCHAR(255) NOT NULL,
+  max_score INT NOT NULL
+);
+
+CREATE TABLE Track_Subject (
+  track_id INT NOT NULL,
+  subject_id INT NOT NULL,
+  PRIMARY KEY (track_id, subject_id),
+  FOREIGN KEY (track_id) REFERENCES Track(track_id),
+  FOREIGN KEY (subject_id) REFERENCES Subject(subject_id)
+);
+
+CREATE TABLE Student_Subject (
+  student_id INT NOT NULL,
+  subject_id INT NOT NULL,
+  PRIMARY KEY (student_id, subject_id),
+  FOREIGN KEY (student_id) REFERENCES Student(student_id),
+  FOREIGN KEY (subject_id) REFERENCES Subject(subject_id)
+);
+
+CREATE TABLE Exam (
+  PRIMARY KEY (student_id, subject_id),
+  student_id INT NOT NULL,
+  subject_id INT NOT NULL,
+  exam_date DATE NOT NULL,
+  score INT NOT NULL,
+  FOREIGN KEY (student_id) REFERENCES Student(student_id),
+  FOREIGN KEY (subject_id) REFERENCES Subject(subject_id)
+);

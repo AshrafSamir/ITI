@@ -1,0 +1,82 @@
+
+3- create view studentstracks as select s.first_name , t.name 
+from student s join track t on s.track_id=t.track_id;
+
+4- CREATE VIEW TrackSubjectsView AS
+SELECT t.name, s.name as subject_name
+FROM Track t
+JOIN Subject s ON t.track_id = s.subject_id;
+
+5- CREATE VIEW StudentSubjectsView AS
+SELECT s.first_name, s.last_name, subj.name as subject_name
+FROM Student s
+JOIN student_subject subj ON s.student_id = subj.student_id;
+JOIN 
+
+
+6- CREATE VIEW StudentScoresView AS
+SELECT CONCAT(s.first_name, ' ', s.last_name) AS full_name, subj.name as subject_name, e.score, e.exam_date
+FROM Student s
+JOIN Exam e ON s.student_id = e.student_id
+JOIN Subject subj ON e.subject_id = subj.subject_id;
+
+
+7- CREATE TEMPORARY VIEW SubjectsMaxScoreView AS
+SELECT name as subject_name, max_score
+FROM Subject;
+
+
+8- CREATE USER ashraf WITH PASSWORD 'admin';
+GRANT ALL PRIVILEGES ON DATABASE iti_grading TO ashraf;
+
+
+9- done
+
+10- SELECT full_name, subject_name, score, to_char(exam_date, 'DD Month YYYY') AS exam_date_formatted
+FROM StudentScoresView;
+
+ 
+11- SELECT first_name, last_name, date_part('year', age(current_date, birth_date)) AS age
+FROM student;
+
+
+12- SELECT s.first_name, s.last_name, sj.name as subject_name, ROUND(e.score) AS rounded_score
+FROM student s
+JOIN exam e ON s.student_id = e.student_id
+JOIN subject sj ON e.subject_id = sj.subject_id;
+
+
+13- SELECT first_name, last_name, EXTRACT(YEAR FROM birth_date) AS birth_year
+FROM student
+
+
+
+14- INSERT INTO exam (student_id, subject_id, score, exam_date)
+VALUES (16, 1, 85, NOW());
+
+
+
+15- CREATE DATABASE ITI;
+
+\c ITI;
+
+CREATE SCHEMA Student;
+
+CREATE TABLE Student.Students (
+  student_id SERIAL PRIMARY KEY,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  birth_date DATE
+);
+
+
+CREATE SCHEMA Track;
+
+CREATE TABLE Track.Tracks (
+  track_id SERIAL PRIMARY KEY,
+  name VARCHAR(50),
+  description TEXT
+);
+
+
+
